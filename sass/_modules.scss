@@ -1,0 +1,57 @@
+@mixin box-sizing() {box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box;}
+@mixin border-radius($radius) {border-radius: $radius;}
+@mixin box-shadow($val1,$val2,$val3,$shadown,$color) {
+    -moz-box-shadow: $val1 $val2 $val3 $shadown $color;
+    -webkit-box-shadow: $val1 $val2 $val3 $shadown $color;
+    box-shadow: $val1 $val2 $val3 $shadown $color;
+}
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+*{margin:0; padding:0;}
+a {color:inherit; text-decoration: none;}
+img {border:none; max-width: 100%;}
+li {list-style-type: none;}
+body {font:16px $Arial; color:$black; background: url(../images/bg.png) repeat 0 0; line-height: 1.2;}
+h1, h2, h3 {font-family: $IABold;font-weight: normal;line-height: 1.22; letter-spacing: -1px;}
+h1 {text-transform: uppercase;}
+.inner {width:1200px; margin:auto; @include clearfix;}
+.button {display: inline-block;white-space: nowrap;padding:0 30px;line-height: 50px; height: 50px;color:#fff;border:none;
+  text-align: center;
+}
+.reg-yello-button{background: url(../images/button1.png) no-repeat 0 0 $yellow; font-size: 20px; color: $black;
+  padding-left: 15px;
+  span {display: inline-block; background:url(../images/arr-b.png) no-repeat 0 center; 
+    padding-left: 26px;
+  }
+}
+.reg-blue-button {background: url(../images/button2.png) no-repeat 0 0 $blue; font-size: 20px; padding-left: 15px;
+  span {display: inline-block; background:url(../images/arr-w.png) no-repeat 0 center; 
+    padding-left: 26px;
+  }
+}
+.blue-bg {background-color: $blue;}
+.yellow-bg {background-color: $yellow;}
+.green-bg {background-color: $green;}
+.clear {clear:both;}
+
+/* Form */
+.form-list {
+  li { margin-bottom: 15px;
+    label {display: block; font:15px $IA; letter-spacing: -0.5px;}
+    .input-text {background: #fff; border-radius: 2px; border:none; height: 45px; line-height: 45px\9; padding:2px;
+      @include box-sizing(); width: 100%;
+    }
+    &.control {
+      .button {border-radius: 2px;}
+    }
+  }
+}
+#main {margin-top: 30px;}

@@ -1,0 +1,41 @@
+$black : #282828;
+$yellow: #ffcc00;
+$blue: #0e38a7;
+$blue1: #005aab;
+$green: #1499c4;
+$grey : #f2f2f2;
+
+/* media queries */
+$desktop: 1200px;
+$tablet: 992px;
+$mobile: 767px;
+$mobile-min-width: 320px;
+
+/* Fonts */
+@font-face {
+    font-family: 'iris_azo';
+    src: url('../fonts/Iris_Azo.otf');
+   /*  src: url('../fonts/iris_azo-webfont.eot');
+    src: url('../fonts/iris_azo-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/iris_azo-webfont.woff2') format('woff2'),
+         url('../fonts/iris_azo-webfont.woff') format('woff'),
+         url('../fonts/iris_azo-webfont.ttf') format('truetype'),
+         url('../fonts/iris_azo-webfont.svg#iris_azo') format('svg'); */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'iris_azo_bold';
+    src: url('../fonts/Iris_Azo_Bold.otf');
+    /* src: url('../fonts/iris_azo_bold-webfont.eot');
+    src: url('../fonts/iris_azo_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/iris_azo_bold-webfont.woff2') format('woff2'),
+         url('../fonts/iris_azo_bold-webfont.woff') format('woff'),
+         url('../fonts/iris_azo_bold-webfont.ttf') format('truetype'),
+         url('../fonts/iris_azo_bold-webfont.svg#iris_azo_bold') format('svg'); */
+    font-weight: normal;
+    font-style: normal;
+}
+$Arial:     Arial, sans-serif;
+$IA:   'iris_azo', Arial, sans-serif;
+$IABold:   'iris_azo_bold', Arial, sans-serif;

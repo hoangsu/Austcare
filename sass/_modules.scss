@@ -42,6 +42,9 @@ h1 {text-transform: uppercase;}
 .green-bg {background-color: $green;}
 .clear {clear:both;}
 
+#main {padding-top: 30px; background: $grey;}
+#main.faq-page,#main.home-content { background: #fff;}
+
 /* Form */
 .form-list {
   li { margin-bottom: 15px;
@@ -54,4 +57,4 @@ h1 {text-transform: uppercase;}
     }
   }
 }
-#main {margin-top: 30px;}
+

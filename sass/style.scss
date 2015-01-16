@@ -449,3 +449,41 @@
 	h1 {color: $blue1; font-size: 25px; margin: 15px 0 20px; letter-spacing: 0;}
 	p {line-height: 35px; }
 }
+.products { margin-bottom: 40px;
+	h1.title {font-size: 35px; margin:40px 0; text-align: center; letter-spacing: 0;}
+	.thumbnail {width: 59%; float: left; @include box-sizing;  padding:0 28px 0 70px; }
+	.specifications {width: 41%; float: right; @include box-sizing;
+		li {@include clearfix; margin-bottom: 17px;
+			.wrapper-img {background: #e6e7e9; width: 116px; height: 100px; float: left; margin-right: 30px;
+				text-align: center;
+				img {max-height: 100px; vertical-align: middle;}
+			}
+			.text {height: 100px;}
+			h3 {font-size: 30px; letter-spacing: 0; vertical-align: middle; display: inline-block;}
+		}
+	}
+}
+.brands {
+	h1.title {font-size: 35px; margin:30px 0; text-align: center; letter-spacing: 0;}
+	ul {@include clearfix;
+		li { width: 25%; padding-right: 40px; @include box-sizing;float: left; margin-bottom: 40px;
+			.wrapper-img {background: #efefef; text-align: center; height: 268px;
+				img { vertical-align: middle;max-height: 268px; }
+			}
+			&:last-child,&:nth-child(4n) {padding-right: 0;}
+			.text {color: #fff; text-align: center;background: $blue1; height: 76px; padding:0 20px;
+				h3 {font: 25px/1 $IA; display: inline-block;vertical-align: middle; letter-spacing: 0;}
+			}
+		}
+	}
+}
+.printed { margin-bottom: 40px; @include clearfix;
+	h1.title {font-size: 35px; margin:30px 0; text-align: center; letter-spacing: 0;}
+	ul {
+		li {width: 33.33%; @include box-sizing; padding-right: 75px; float: left;
+			img{height: 254px;}
+			h3 {font: 25px/1.2 $IA; letter-spacing: 0; text-align: center; margin:20px 0;}
+			&:last-child {padding-right: 0;}
+		}
+	}
+}

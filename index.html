@@ -6,6 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 <link rel="stylesheet" href="css/style.css"/>
 <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+<link rel="stylesheet" href="css/colorbox.css" />
+<script src="js/jquery.colorbox.js"></script>
 <script type="text/javascript" src="js/austcare.js"></script>
 <title>ADG Home page</title>
 </head>
@@ -27,7 +29,13 @@
 			<div class="menu">
 				<ul>
 					<li><a class="home" href="#" title="">Home</a></li>
-					<li><a href="#">Tư vấn</a></li>
+					<li><a href="#">Tư vấn</a>
+						<ul class="sub-menu">
+							<li><a href="#" title="">smenu 1</a></li>
+							<li><a href="#" title="">Nhận biết sản phẩm chính hãng</a></li>
+							<li><a href="#" title="">smenu 3</a></li>
+						</ul>
+					</li>
 					<li><a href="#">Dịch vụ sửa chữa</a></li>
 					<li><a href="#">Hỗ trợ</a></li>
 					<li><a href="#">Tin tức </a></li>
@@ -37,7 +45,7 @@
 	</div>
 	<div class="home-banner">
 		<div class="inner">
-			<div class="register">
+			<div class="register" id="register">
 				<form action="#" method="post" accept-charset="utf-8">
 					<h1>Đăng ký miễn phí</h1>
 					<ul class="form-list">
@@ -157,7 +165,7 @@
 								<p>Thật là nguy hiểm nếu cửa cuốn nhà bạn lắp mô tơ mã cố định  -  có thể bị dò sóng dễ dàng và sao chép mã số để đột nhập &amp; trộm cắp tài sản</p>
 								<p>Hãy đăng ký ngay với Austcare để được kiểm tra của cuốn hoàn toàn miễn phí.</p>
 								<div class="click">
-									<a class="button reg-blue-button" href="#"><span>Đăng ký kiểm tra cửa cuốn miễn phí</span></a>
+									<a class="button reg-blue-button inline" href="#register"><span>Đăng ký kiểm tra cửa cuốn miễn phí</span></a>
 								</div>
 							</div>
 						</div>
@@ -176,7 +184,7 @@
 				</div>
 			</div>
 		</div>	
-		<div class="easy-contact">
+		<div class="easy-contact" id="easy-contact">
 			<div class="inner">
 				<div class="top">
 					<h1>Liên hệ dễ dàng</h1>
@@ -289,7 +297,7 @@
 			<h2>Click</h2>
 		</div>
 		<div class="click">
-			<a href="" class="button" title="">Hãy chat với  tôi !</a>
+			<a href="#easy-contact" class="inline button" title="">Hãy chat với  tôi !</a>
 		</div>
 		<div class="clear"></div>
 	</div>

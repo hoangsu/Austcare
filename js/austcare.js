@@ -25,4 +25,7 @@ $(document).ready(function() {
 		$(".select-city ul").hide();
 		$(this).parents('.select-city').children('.text-top').text(text);
 	});
+	$(".group1").colorbox({rel:'group1'});
+	$(".group2").colorbox({rel:'group2'});
+	$(".inline").colorbox({inline:true});
 });

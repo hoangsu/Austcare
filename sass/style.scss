@@ -209,7 +209,7 @@
 		img {vertical-align: middle; margin-left: 20px; padding-bottom: 5px;}
 	}
 	.footer-menu {
-		li {line-height: 54px;float: left;
+		li {line-height: 54px;float: left; white-space: nowrap;
 			a {display: inline-block;border-right:1px solid #fff;font:14px/14px $IA;
 			 padding:0 12px;
 				&:hover {color: $yellow}

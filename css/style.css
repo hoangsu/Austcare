@@ -226,7 +226,7 @@ h2 { font-size: 21px; }
 #footer .footer-logo { float: left; margin-right: 54px; }
 #footer .footer-logo p { text-transform: uppercase; line-height: 54px; font-size: 12px; }
 #footer .footer-logo img { vertical-align: middle; margin-left: 20px; padding-bottom: 5px; }
-#footer .footer-menu li { line-height: 54px; float: left; }
+#footer .footer-menu li { line-height: 54px; float: left; white-space: nowrap; }
 #footer .footer-menu li a { display: inline-block; border-right: 1px solid #fff; font: 14px/14px "iris_azo", Arial, sans-serif; padding: 0 12px; }
 #footer .footer-menu li a:hover { color: #ffcc00; }
 #footer .footer-menu li:first-child a { border-left: 1px solid #fff; }

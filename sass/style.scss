@@ -31,17 +31,18 @@
 .home-banner {background: url(../images/home-banner.jpg) no-repeat center 0 $blue;
  @include clearfix;padding-bottom: 7px;
 	.text {text-align: right; color: #fff; padding-left: 20%;
-		.caption {margin-top: 25px;
-			h1 {font-size:30px; letter-spacing: -0.2px; line-height: 50px;
+		.caption {margin-top: 50px;
+			h1 {font-size:30px; margin-bottom: 0; line-height: 40px;
 				span {color: $yellow;display: block;}
 			}
 			p {font:20px $IA; letter-spacing: -0.5px;}
 		}
-		.call-me { margin-top: 45px;
+		.call-me { margin-top: 55px;
 			h2 {font: 25.5px/40px $IA; letter-spacing: -1px;}
-			h1 {background: url(../images/phone.png) no-repeat 0 center; padding-left: 67px;
+			h1 {background: url(../images/phone.png) no-repeat 0 center;
+			 padding-left: 52px;background-size: 42px;
 			 font-size:35px; display: inline-block;
-				height: 57px; line-height: 57px;
+				height: 45px; line-height: 45px;
 			}
 		}
 	}
@@ -275,7 +276,7 @@
 /* News new */
 .top-nmenu {position: relative;z-index: 10; @include clearfix(); margin-bottom: 26px;
 	height: 51px; background: #0064be;color: #fff;
-	h1 {display: inline-block;  padding-left: 15px; line-height: 51px;}
+	h1 {display: inline-block;  padding-left: 15px; line-height: 51px; white-space: nowrap;}
 }
 .nmenu {float: right; margin-top: 12px;  margin-right: 10px;color: $black;
 	li {background: #fff;

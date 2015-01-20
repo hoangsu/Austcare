@@ -3,12 +3,12 @@
 
 /* Homepage */
 #header {background: #fff; height: 112px; border-bottom: 8px solid $yellow;
-	.logo {width: 46%;float:left; padding-top: 38px; padding-left: 73px; @include box-sizing();}
-	.menu {width: 54%; float: right; padding-top: 41px;}
+	.logo {width: 46%;float:left; padding-top: 25px; padding-left: 10px; @include box-sizing();}
+	.menu {width: 50%; float: right; padding-top: 41px;}
 }
 .menu {
 	li {float: left; position: relative; padding:5px 15px;
-		a {font:25px/27px $IABold; display: inline-block;white-space: nowrap;
+		a {font:20px/26px $IABold; display: inline-block;white-space: nowrap;
 			&.home {text-indent: -99999px; background: url(../images/home-icon.png) no-repeat 0 0;width: 30px; height: 27px;}
 		}
 		&:first-child {margin-left:0;
@@ -18,7 +18,7 @@
 			@include box-shadow(3px, 3px, 7px, 0px, rgba(0, 0, 0, 0.5)); background: #3b3b3b;
 			li {background: #3b3b3b; padding:5px 12px;border-bottom: 1px solid #727272; display: block;
 				color: #fff;width: 100%;@include box-sizing;
-				a {font:normal 16px/26px $Arial; display: block;}
+				a {font:normal 14px/24px $Arial; display: block;}
 				&:hover {background: #222222; color: $yellow;}
 				&:last-child {border-bottom: none;}
 			}
@@ -28,49 +28,54 @@
 		}
 	}
 }
-.home-banner {background: url(../images/home-banner.jpg) no-repeat center 0 $blue; @include clearfix;
-	height: 480px;
+.home-banner {background: url(../images/home-banner.jpg) no-repeat center 0 $blue;
+ @include clearfix;padding-bottom: 7px;
 	.text {text-align: right; color: #fff; padding-left: 20%;
-		.caption {margin-top: 75px;
-			h1 {font-size:45px; letter-spacing: -0.2px; line-height: 55px;
-				span {color: $yellow;}
+		.caption {margin-top: 25px;
+			h1 {font-size:30px; letter-spacing: -0.2px; line-height: 50px;
+				span {color: $yellow;display: block;}
 			}
 			p {font:20px $IA; letter-spacing: -0.5px;}
 		}
 		.call-me { margin-top: 45px;
-			h2 {font: 35.5px/70px $IA; letter-spacing: -1px;}
-			h1 {background: url(../images/phone.png) no-repeat 0 center; padding-left: 67px; font-size:45px; display: inline-block;
+			h2 {font: 25.5px/40px $IA; letter-spacing: -1px;}
+			h1 {background: url(../images/phone.png) no-repeat 0 center; padding-left: 67px;
+			 font-size:35px; display: inline-block;
 				height: 57px; line-height: 57px;
 			}
 		}
 	}
 }
-.register {@include box-sizing();width: 337px; height: 440px; background: $yellow; float: right; margin:15px 20px 15px 48px;
-	padding:25px;border-radius: 10px;@include box-shadow(5px, 5px, 0px, 0px, #c98000) ;
+.register {@include box-sizing();width: 290px; background: $yellow; float: right; margin:15px 20px 15px 48px;
+	padding:15px 20px;border-radius: 10px;@include box-shadow(5px, 5px, 0px, 0px, #c98000) ;
+	h1 {font-size: 26px;}
 	.form-list {
+		li.control {margin:13px 0 0;}
 		.button {color:#fff; font:bold 28px $Arial;text-transform: uppercase; text-align: center;
-			background: url(../images/register-bt.png) no-repeat 0 0 $blue; height: 63px; line-height: 63px;padding:0 63px;
+			background: url(../images/register-bt.png) no-repeat 0 0 $blue; height: 43px; 
+			line-height: 43px;padding:0 43px;
 		}
 	}
 }
 #cboxLoadedContent .register{ margin:0;width: 500px; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;}
 .service { padding:0 46px; text-align: center;
-	h1 {font-size: 35px; line-height: 70px; margin-bottom:40px;}
-	.col {@include box-sizing; width: 484px; display: inline-block; vertical-align: top; height: 527px;
-		background: $grey; margin:0 35px;padding:35px;
-		img {margin-bottom: 20px;}
-		h2 {font-size: 28px; text-transform: uppercase; margin-bottom: 5px;}
-		p {font:25px/35px $IA; margin-bottom: 30px;}
-		.button {border-radius: 2px; color: #fff; height: 58px; line-height: 58px; text-align: center; font-size: 20px;
-			margin-bottom: 4px;padding:0 40px;
+	h1 { margin-bottom:30px;}
+	.col {@include box-sizing; width: 45%;float: left;
+		background: $grey;padding:35px;
+		img {margin-bottom: 20px; width:36%;}
+		h2 { text-transform: uppercase; margin-bottom: 10px;}
+		p {font:20px/28px $IA; margin-bottom: 30px;}
+		.button {border-radius: 2px; color: #fff;text-align: center; height: 40px; line-height: 40px;
+			margin-bottom: 2px;padding:0 40px;
 			&:hover {background-color: #fff; border:2px solid $blue; color: $black; margin-top: -2px; margin-left: -2px;
 				margin-bottom: 0;
 			}
 		}
+		&.dv {float: right;}
 	}
 }
 .why-us {
-	h1.title {text-align: center; font-size: 35px; line-height: 70px; margin: 15px 0 25px;}
+	h1.title {text-align: center;  line-height: 50px; margin: 15px 0 25px;}
 	.bg-wrapper {background: #efefef; padding: 30px 0;}
 	.col {width: 25%; @include box-sizing; padding-right: 22px; float: left;
 		&:last-child {padding-right: 0;}
@@ -78,11 +83,12 @@
 			img {vertical-align: middle;}
 		 }
 		.caption {
-			.number {display: inline-block; width: 47px; height: 47px; margin-right: 10px; line-height:  47px;
-				float: left;color:#fff; font-size: 25px; font-weight: bold;border-radius: 100%;text-align: center;
+			.number {display: inline-block; width: 37px; height: 37px; margin-right: 10px;
+			 	line-height:  37px;
+				float: left;color:#fff; font-size: 22px; font-weight: bold;border-radius: 100%;text-align: center;
 				margin-left: 10px;
 			}
-			h3 {font:bold 15px/47px $Arial; text-transform: uppercase;}
+			h3 {font:bold 14px/37px $Arial; text-transform: uppercase;}
 		}
 	}
 }
@@ -90,36 +96,38 @@
 	margin-top: 50px;
 	.top {
 		.left {position: relative;float: left;margin-right: 33px;width: 50%;
-			img {height: 428px;}
+			img {height: 380px; width: 100%;}
 			.top-conner {background: url(../images/top-conner.png) no-repeat 0 0; display: block; width: 76px; height: 43px;
 				top:0; right:-1px; position: absolute;
 			}
 		}
-		.right {background: $blue;color: #fff; padding:30px 20px 40px; height: 428px; @include box-sizing;
-			h1 {font-size: 30px;margin-bottom: 20px;}
-			p {font: 20px/24px $IABold; margin-bottom: 20px; }
-			.click {margin-top: 80px;}
+		.right {background: $blue;color: #fff; padding:30px 20px 40px; height: 380px; 
+			@include box-sizing;
+			h1 {margin-bottom: 20px;}
+			p {font: 18px/24px $IABold; margin-bottom: 20px; }
+			.click {margin-top: 40px;}
 		}
 	}
 	.bottom {
-		.left {background: #fac809;height: 433px; color: #fff;padding:30px 20px 40px; @include box-sizing;
-			h1 {font-size: 30px;margin-bottom: 25px;text-align: right;}
-			p {font:bold 20px/24px $Arial;margin-bottom: 20px;}
-			.click {margin-top: 80px;}
+		.left {background: #fac809;height: 370px; color: #fff;padding:30px 20px 40px; 
+			@include box-sizing;
+			h1 {margin-bottom: 20px;text-align: right;}
+			p {font:bold 18px/24px $Arial;margin-bottom: 20px;}
+			.click {margin-top: 40px;}
 		}
 		.right{float: right;position: relative; width: 50%; margin-left: 25px;
-			img {height: 433px;}
+			img {height: 370px;width:100%;}
 		}
 	}
 }
-.reg-now {margin-bottom: 40px; 
-	.inner { padding:40px 50px 40px 25px;background: url(../images/reg1.jpg) no-repeat center 0; @include box-sizing;}
-	.reg {float: right; margin-left: 40px;padding-top: 15px;
-		.button {font-size: 24px; line-height: 55px; height: 55px;}
+.reg-now {margin-bottom: 40px;margin-top:10px;
+	.inner { padding:20px 35px;background: url(../images/reg1.jpg) no-repeat center 0; @include box-sizing;}
+	.reg {float: right; margin-left: 40px;padding-top: 15px; margin-top: 20px;
+		.button {font-size: 20px; line-height: 45px; height:45px;}
 	}
-	.text {text-align: right;
-		h1 {font-size: 24px; margin-bottom: 10px; color: $yellow;}
-		p {font-size: 20px;line-height: 24px; color: #fff; }
+	.text {text-align: right; overflow:hidden;
+		h1 {font-size: 22px; margin-bottom: 15px; color: $yellow;}
+		p {font-size: 18px;line-height: 24px; color: #fff; }
 	}
 	&.yellow {
 		.inner {
@@ -133,34 +141,35 @@
 }
 .easy-contact { margin-bottom: 30px;
 	.top {text-align: center; margin-bottom: 30px;padding:0 60px;
-		h1 {font-size: 35px; margin-bottom: 10px;}
-		p {font-size: 25px;}
+		h1 { margin-bottom: 20px;}
+		p {font-size: 20px;}
 	}
 	.col-group {
-		.col {width: 33%; @include box-sizing; padding-right: 41px;text-align: center;float: left;
-			&:last-child {padding-right: 0;}
-			img {margin-bottom: 30px;}
-			.caption {background: $grey; padding:20px; height: 232px; @include box-sizing;
-				h1 {font-size: 30px; color: #0c2c81; margin-bottom: 20px;}
-				p {font:25px/42px $Arial; letter-spacing: -1px;}
+		.col {width: 31%; @include box-sizing; margin-right: 3%;text-align: center;float: left;
+			&:last-child {margin-right: 0;}
+			img {margin-bottom: 20px; width:45%;}
+			.caption {background: $grey; padding:20px; @include box-sizing;
+				h1 { color: #0c2c81; margin-bottom: 20px; font-size: 22px;}
+				p {font:18px/32px $Arial; letter-spacing: -1px;}
 			}
 		}
 	}
 }
 #cboxLoadedContent .easy-contact {padding-top: 20px;}
-.customer-say {height: 541px;
+.customer-say {
 	background: url(../images/customer-say.jpg) no-repeat center 0 $blue;margin-bottom: 35px; 
-	.bg-wrapper {background: url(../images/customer-say1.png) repeat 0 0;padding:40px 0 50px;
+	.bg-wrapper {background: url(../images/customer-say1.png) repeat 0 0;padding:30px 0;
 		.title {color: #fff;text-align: center; margin-bottom: 50px;
-			h1 {font-size: 35px;margin-bottom: 20px; padding:0 20px;}
-			p {font-size: 25px; line-height: 30px}
+			h1 {margin-bottom: 20px; padding:0 20px;}
+			p {font-size: 20px; line-height: 28px}
 		}
 		.customer {
-			.bubble {border-radius: 10px; background: #fff; padding:30px 30px 30px 37px; position: relative;
+			.bubble {border-radius: 10px; background: #fff; padding:30px 30px 30px 37px;
+			 position: relative;
 				&:after {content: ""; position: absolute; bottom: -31px; right:13%; 
 					background: url(../images/bubble-ar1.png) no-repeat;width: 54px; height: 31px; display: inline-block;
 				}
-				p {font-size: 18px; line-height: 28px; position: relative;display: inline-block;
+				p {font-size: 16px; line-height: 24px; position: relative;display: inline-block;
 					&:before {position: absolute;content: ""; background: url(../images/quote1.png) no-repeat 0 0; 
 						top:-13px; left:-24px;width: 25px; height: 20px;
 					}
@@ -194,14 +203,15 @@
 .fb-likebox {margin-bottom: 35px;}
 
 #footer {
-	height: 74px; background: $blue; color: #fff;
-	.footer-logo {float: left; margin-right: 74px;
-		p {text-transform: uppercase; line-height: 74px; font-size: 12px;}
+	height: 54px; background: $blue; color: #fff;
+	.footer-logo {float: left; margin-right: 54px;
+		p {text-transform: uppercase; line-height: 54px; font-size: 12px;}
 		img {vertical-align: middle; margin-left: 20px; padding-bottom: 5px;}
 	}
 	.footer-menu {
-		li {line-height: 74px;float: left;
-			a {display: inline-block;border-right:1px solid #fff;font:18px/20px $IABold; padding:0 12px;
+		li {line-height: 54px;float: left;
+			a {display: inline-block;border-right:1px solid #fff;font:14px/14px $IA;
+			 padding:0 12px;
 				&:hover {color: $yellow}
 			}
 			&:first-child {
@@ -210,29 +220,30 @@
 		}
 	}
 	.footer-social {float: right;
-		li {line-height: 74px; margin-right: 12px;float: left;
-			a {display: inline-block;background: url(../images/social.png) no-repeat 0 0; width: 50px; height: 50px;
-				text-indent: -99999px;vertical-align: middle;
+		li {line-height: 54px; margin-right: 5px;float: left;
+			a {display: inline-block;background: url(../images/social.png) no-repeat 0 0; 
+				width: 32px; height: 30px;
+				text-indent: -99999px;vertical-align: middle;background-size: 110px auto;
 			}
 			.fb {
 				&:hover {background-position: 0 bottom;}
-			}.tw {background-position: -69px 0;
-				&:hover {background-position: -69px bottom;}
-			}.yu {background-position: -138px 0;
-				&:hover {background-position: -138px bottom;}
+			}.tw {background-position: -39px 0;
+				&:hover {background-position: -39px bottom;}
+			}.yu {background-position: -79px 0;
+				&:hover {background-position: -79px bottom;}
 			}
 		}
 	}
 }
 #chat-me {display: inline-block; position: fixed; right: 5px; bottom:10px;
 	.close {position: absolute; font-size: 20px; font-weight: bold; right:5px; top:0px;}
-	.bubble {text-align: right; background: $yellow; padding:20px;width: 316px;position: relative;@include box-sizing;
+	.bubble {text-align: right; background: $yellow; padding:20px;position: relative;@include box-sizing;
 		&:after {content: ""; position: absolute; bottom:-33px; right:53px; background: url(../images/arr-c.png) 0 0;
 			width: 18px; height: 33px; display: inline-block;
 		}
-		h1 {font:30px $Arial; text-transform: none;}
-		h2 {font:25px $Arial;text-transform: none;}
-		p {font:bold 20px $Arial; margin: 10px 0;}
+		h1 {font:24px $Arial; text-transform: none;}
+		h2 {font:20px $Arial;text-transform: none;}
+		p {font:bold 16px $Arial; margin: 10px 0;}
 	}
 	.click {float: right;border:4px solid #fff; @include box-shadow(2px, 2px, 5px, 0px, rgba(0, 0, 0, 0.6));
 		display: inline-block;border-radius: 5px;margin-top: 39px;
@@ -242,19 +253,19 @@
 /* FAQ */
 .question-list { margin-bottom: 20px;
 	h1.title {
-		font-size: 40px; margin:20px 0 40px; text-align: center;
+		font-size: 30px; margin:20px 0 40px; text-align: center;
 	}
 	ul { @include clearfix;
-		li {float: left; width: 20%;height: 317px; @include box-sizing; padding:0 12px;
+		li {float: left; width: 20%; @include box-sizing; padding:0 12px;
 			margin-bottom: 25px;text-align: center;
 			&:first-child {padding-left: 0}
 			&:last-child{padding-right: 0}
-			.finner {padding:15px;background: #f6f7f9;height: 317px; @include box-sizing;
-				.img-wrap {height: 178px;
+			.finner {padding:15px;background: #f6f7f9;height: 285px; @include box-sizing;
+				.img-wrap {height: 158px;
 					.helper { vertical-align: bottom;}
 				}
 				img {vertical-align: bottom;}
-				h3 {margin-top: 20px;  font:bold 15px/24px $Arial; text-transform: uppercase;
+				h3 {margin-top: 20px;  font:bold 14px/24px $Arial; text-transform: uppercase;
 					letter-spacing: 0;
 				}
 			}
@@ -264,7 +275,7 @@
 /* News new */
 .top-nmenu {position: relative;z-index: 10; @include clearfix(); margin-bottom: 26px;
 	height: 51px; background: #0064be;color: #fff;
-	h1 {display: inline-block; font-size: 30px; padding-left: 15px; line-height: 51px;}
+	h1 {display: inline-block;  padding-left: 15px; line-height: 51px;}
 }
 .nmenu {float: right; margin-top: 12px;  margin-right: 10px;color: $black;
 	li {background: #fff;
@@ -329,7 +340,7 @@
 	}
 }
 /* News detail */
-#main.detail-page {
+#main.detail-page {background: $grey;
 	padding-top: 0;
 	.inner {background: #fff; padding-top: 30px;}
 }
@@ -376,6 +387,15 @@
 			.other {position:absolute;bottom:27px; left:38px; white-space: nowrap;
 				.more-link {font-size: 13px; text-transform: uppercase; color:#666666;
 				 text-decoration: none; font-family: $IA; margin-left: 9px;}
+				.button {
+					border-radius: 4px;
+					padding: 0 33px 0 25px;
+					background: url(../images/arrow-button.png) no-repeat 86px center $orange;
+					height: 33px;
+					text-transform: uppercase;
+					color: #fff;
+					font: bold 12px/33px $IA;
+				}
 			}
 		}
 		.image { float: left; width: 51%;
@@ -384,19 +404,18 @@
 	}
 }
 /* Tu Van*/
-.tv-banner { height: 295px;
-	background: url(../images/tv-banner.jpg) no-repeat center 0;
+.tv-banner { height: 225px;
+	background: url(../images/tv-banner.jpg) no-repeat center 0;background-size: cover;
 }
 .buying-guide {text-align: center; margin-bottom: 50px;
-	h1 {font-size: 35px; margin-bottom: 17px;}
-	h2 {font-size: 25px; text-transform: uppercase; margin-bottom: 22px;}
-	p {font-size: 25px; line-height: 40px;}
+	h2 {font-size: 22px; text-transform: uppercase; margin-bottom: 22px;}
+	p {font-size: 22px; line-height: 30px;}
 }
 .agents { margin-bottom: 40px;
 	h1.title {text-align: center; margin-bottom: 30px;}
 	.tabs {@include clearfix;
-		li {width: 33.33%; float: left; background-color: $blue; color: #fff; font-size: 30px; 
-			font-weight: bold; height: 87px; line-height: 87px; text-align: center;
+		li {width: 33.33%; float: left; background-color: $blue; color: #fff;font-size:20px;  
+			font-weight: bold; height: 60px; line-height: 60px; text-align: center;
 			&.active {background: $yellow; color: $black;}
 			a {display: block; height: 100%;}
 			&.active {background-image: url(../images/arr-top.png);background-position:center bottom;
@@ -406,18 +425,18 @@
 	}
 	.tab-content {border:1px solid #c8c8c8;background: #f5f5f5;border-top: 0;
 		.head { height: 89px;border-bottom:1px solid #c8c8c8;
-			h1 {font:bold 30px $Arial; display: inline-block; line-height: 89px; padding-left:24px; 
+			h1 {font:bold 20px $Arial; display: inline-block; line-height: 89px; padding-left:24px; 
 				text-transform: none; 
 			}
 			.select-city { position: relative;float: right;margin-top: 17px; margin-right: 25px;
 				.text-top {display: block; width: 100%; height: 100%; @include box-sizing;
-					font-size: 20px; padding-left: 20px; line-height: 54px;cursor: default;
-					background: url(../images/arr-select.png) right 0 no-repeat #fff;
-					border:1px solid #999; width: 386px; height: 54px;
+					font-size: 18px; padding-left: 20px; line-height: 44px;cursor: default;
+					background: url(../images/arr-select.png) right 0 no-repeat #fff;background-size: auto 100%;
+					border:1px solid #999; width: 280px; height: 44px;
 					&:focus {background: $blue;}
 				}
 				ul {display: none; background: #fff; border:1px solid #999; border-top: 0;position: absolute;
-					left:0; top:54px; width: 100%; @include box-sizing;
+					left:0; top:44px; width: 100%; @include box-sizing;
 					li{
 						&:hover {background:#1e90ff; color: #fff; }
 						a {display: block;padding:0 20px;line-height: 40px;}
@@ -427,33 +446,33 @@
 		}
 		.agents-list {
 			ul {
-				li {border-bottom: 1px solid #c8c8c8; padding:25px 35px;font-size: 20px;
+				li {border-bottom: 1px solid #c8c8c8; padding:15px 25px;font-size: 18px;
 				 line-height: 30px;font-weight: bold;
 					&:nth-child(2n) {background: #fff;}
-					span.number {float: left; display: block;font-size: 35px;font-weight: bold;
-					 margin-right: 35px; line-height: 43px;}
+					span.number {float: left; display: block;font-weight: bold;
+					 margin-right: 25px; line-height: 43px;}
 					>div {overflow: hidden;}
 				}
 			}
 		}
 	}
 }
-.showrooms { margin-bottom: 60px; @include clearfix;
-	>h1 {font-size: 35px;text-align: center; margin-bottom: 40px;}
+.showrooms { margin-bottom: 40px; @include clearfix;
+	>h1 {text-align: center; margin-bottom: 40px;}
 	.col {width: 32%; margin-right: 1.33%; margin-top: 23px; float: left;
 		&:last-child {margin-right: 0;}
-		.head {height: 86px; line-height: 86px; text-align: center; color:#fff; background: $blue;
-			h1 {text-transform: none; font:bold 30px/86px $Arial;}
+		.head {height: 60px; line-height: 60px; text-align: center; color:#fff; background: $blue;
+			h1 {text-transform: none; font:bold 20px/60px $Arial;}
 		}
 		&.col-2 { margin-top: 0;
 			.head {background: $yellow; color: $black;}
 		}
 		ul {
 			li {background: #f3f3f3; border-bottom: 1px solid #fff; padding:15px;
-				span.number {float: left; display: block;font-size: 25px;font-weight: bold;
+				span.number {float: left; display: block;font-size: 22px;font-weight: bold;
 					 margin-right: 11px;}
 				>div {overflow: hidden;}
-				h3 {font:bold 20px/35px $Arial;}
+				h3 {font:bold 18px/30px $Arial;}
 				p {font-weight: bold; font-size:15px; line-height: 19px;}
 				&:hover {
 					span.number,h3 {color: $blue1;}
@@ -467,7 +486,7 @@
 	p {line-height: 35px; }
 }
 .products { margin-bottom: 40px;
-	h1.title {font-size: 35px; margin:40px 0; text-align: center; letter-spacing: 0;}
+	h1.title { margin:40px 0; text-align: center; letter-spacing: 0;}
 	.thumbnail {width: 59%; float: left; @include box-sizing;  padding:0 28px 0 70px; }
 	.specifications {width: 41%; float: right; @include box-sizing;
 		li {@include clearfix; margin-bottom: 17px;
@@ -476,12 +495,12 @@
 				img {max-height: 100px; vertical-align: middle;}
 			}
 			.text {height: 100px;}
-			h3 {font-size: 30px; letter-spacing: 0; vertical-align: middle; display: inline-block;}
+			h3 { letter-spacing: 0; vertical-align: middle; display: inline-block;}
 		}
 	}
 }
 .brands {
-	h1.title {font-size: 35px; margin:30px 0; text-align: center; letter-spacing: 0;}
+	h1.title { margin:30px 0; text-align: center; letter-spacing: 0;}
 	ul {@include clearfix;
 		li { width: 23%; margin-right: 2.6%; float: left; margin-bottom: 40px;
 			.wrapper-img {background: #efefef; text-align: center; height: 268px;
@@ -489,13 +508,13 @@
 			}
 			&:last-child,&:nth-child(4n) {margin-right: 0;}
 			.text {color: #fff; text-align: center;background: $blue1; height: 76px; padding:0 20px;
-				h3 {font: 25px/1 $IA; display: inline-block;vertical-align: middle; letter-spacing: 0;}
+				h3 {font: 22px/24px $IA; display: inline-block;vertical-align: middle; letter-spacing: 0;}
 			}
 		}
 	}
 }
 .printed { margin-bottom: 40px; @include clearfix;
-	h1.title {font-size: 35px; margin:30px 0; text-align: center; letter-spacing: 0;}
+	h1.title { margin:30px 0; text-align: center; letter-spacing: 0;}
 	ul {
 		li {width: 33.33%; @include box-sizing; padding-right: 75px; float: left;
 			img{height: 254px;}
@@ -507,20 +526,22 @@
 /* dich vu */
 .dv-banner {background: url(../images/dv-banner.jpg) no-repeat center 0; height: 429px;}
 .service-fix { padding-bottom:50px; text-align: center;
-	h1.title {font-size: 40px; margin: 20px 0 40px;}
+	h1.title {margin: 20px 0 40px;}
 	.col {width: 29%; margin-right:6.5%;text-align: center;color: #58595b;float: left;
 		&:last-child {margin-right: 0;}
 		img {margin-bottom: 50px;}
 		h2 {font-size: 20px; margin-bottom: 12px;}
-		p {font-size: 20px;}
+		p {font-size: 17px;line-height: 22px;}
 	}
 }
 .enjoy{ margin-bottom: 40px;
 	.inner {padding:20px;
-		.wrapper-img {background: #fff; padding:7px; float: left; margin-right: 35px;}
+		.wrapper-img {background: #fff; padding:7px; float: left; margin-right: 35px;
+			img {width:350px;}
+		}
 		.text {color: #fff;
-			h1 {font-size: 30px; margin:20px 0;}
-			p {font-weight: bold;font-size: 25px;}
+			h1 { margin:20px 0;}
+			p {font-weight: bold;font-size: 20px;}
 			a.button {margin-top: 70px;}
 		}
 	}
@@ -538,7 +559,8 @@
 	li {width: 30%; margin-right: 5%; float: left;
 		&:last-child{margin-right: 0;}
 		img {width: 100%; height: 219px;}
-		a.title {display: block; height: 64px;line-height: 64px; text-align: center;font-size: 21px; 
+		a.title {display: block; height: 54px;line-height: 54px; text-align: center;
+			font-size: 20px; 
 			font-weight: bold;background: $blue; color: #fff;
 			&:hover {background: $yellow; color: $black;}
 		}

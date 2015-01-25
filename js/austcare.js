@@ -25,6 +25,11 @@ $(document).ready(function() {
 		$(".select-city ul").hide();
 		$(this).parents('.select-city').children('.text-top').text(text);
 	});
+	$(".showrooms .col-2 .head").addClass('active');
+	$(".showrooms .head").click(function(event) {
+		$(".showrooms .head").removeClass("active");
+		$(this).addClass("active");
+	});
 	$(".group1").colorbox({rel:'group1'});
 	$(".group2").colorbox({rel:'group2'});
 	$(".inline").colorbox({inline:true});

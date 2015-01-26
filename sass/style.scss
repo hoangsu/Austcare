@@ -37,14 +37,14 @@
 			}
 			p {font:20px $IA; letter-spacing: -0.5px;}
 		}
-		.call-me { margin-top: 55px;
-			h2 {font: 25.5px/40px $IA; letter-spacing: -1px;}
-			h1 {background: url(../images/phone.png) no-repeat 0 7px;
-			 padding-left: 52px;background-size: 42px auto;
-			 font-size:35px; display: inline-block;
-				height: 54px; line-height: 50px;
-			}
-		}
+	}
+}
+.call-me { margin-top: 55px;
+	h2 {font: 25.5px/40px $IA; letter-spacing: -1px;}
+	h1 {background: url(../images/phone.png) no-repeat 0 7px;
+	 padding-left: 52px;background-size: 42px auto;
+	 font-size:35px; display: inline-block;
+		height: 54px; line-height: 50px;
 	}
 }
 .register {@include box-sizing();width: 290px; background: $yellow; float: right; margin:15px 20px 15px 48px;
@@ -78,8 +78,8 @@
 .why-us {
 	h1.title {text-align: center;  line-height: 50px; margin: 15px 0 25px;}
 	.bg-wrapper {background: #efefef; padding: 30px 0;}
-	.col {width: 25%; @include box-sizing; padding-right: 22px; float: left;
-		&:last-child {padding-right: 0;}
+	.col {width: 23.45%; @include box-sizing; margin-right: 2%; float: left;
+		&:nth-child(4) {margin-right: 0;}
 		.bg { margin-bottom: 10px;height: 174px;text-align: center;
 			img {vertical-align: middle;}
 		 }
@@ -122,11 +122,11 @@
 	}
 }
 .reg-now {margin-bottom: 40px;margin-top:10px;
-	.inner { position: relative; }
+	.inner { position: relative; background: $blue;}
 	.reg {margin-top: 20px;position: absolute; top:50%; right:35px; margin-top: -22px;
 		.button {font-size: 20px; line-height: 45px; height:45px;}
 	}
-	.text {text-align: right; overflow:hidden;
+	.text {text-align: right; overflow:hidden; padding-right: 290px;
 		h1 {font-size: 22px; margin-bottom: 15px; color: $yellow;}
 		p {font-size: 18px;line-height: 24px; color: #fff; }
 	}
@@ -148,7 +148,7 @@
 	.col-group {
 		.col {width: 31%; @include box-sizing; margin-right: 3%;text-align: center;float: left;
 			&:last-child {margin-right: 0;}
-			img {margin-bottom: 20px; width:45%;}
+			img {margin-bottom: 20px; width:45%; border-radius: 100%;@extend .shadown;}
 			.caption {background: $grey; padding:20px; @include box-sizing;
 				h1 { color: #0c2c81; margin-bottom: 20px; font-size: 22px;}
 				p {font:18px/32px $Arial; letter-spacing: -1px;}
@@ -261,7 +261,7 @@
 			margin-bottom: 25px;text-align: center;
 			&:first-child {padding-left: 0}
 			&:last-child{padding-right: 0}
-			.finner {padding:15px;background: #f6f7f9;height: 285px; @include box-sizing;
+			.finner {padding:15px;background: #f6f7f9;height: 285px; @include box-sizing;@extend .shadown;
 				.img-wrap {height: 158px;
 					.helper { vertical-align: bottom;}
 				}
@@ -529,7 +529,7 @@
 	h1.title {margin: 20px 0 40px;}
 	.col {width: 29%; margin-right:6.5%;text-align: center;color: #58595b;float: left;
 		&:last-child {margin-right: 0;}
-		img {margin-bottom: 50px; width:57%;}
+		img {margin-bottom: 50px; width:57%; @extend .shadown;border-radius: 100%;}
 		h2 {font-size: 20px; margin-bottom: 12px;}
 		p {font-size: 17px;line-height: 22px;}
 	}
@@ -550,13 +550,15 @@
 #main.thuvien-page {background: $grey;
 	.inner {background: #fff; border-top: 5px solid $blue; padding:24px 45px;
 		h1.title {margin:20px auto 30px; width: 327px; font-size: 25px; border-top: 2px solid $blue;text-align: center;
-			span {display: inline-block; background: #fff; padding:0 15px;margin-top: -20px;}
+			span {display: inline-block; background: #fff; padding:0 15px;margin-top: -20px;
+				white-space: nowrap;
+			}
 		}
 	}
 }
 
 .thv-category { @include clearfix; margin-bottom: 50px;
-	li {width: 30%; margin-right: 5%; float: left;
+	li {width: 30%; margin-right: 5%; float: left;@extend .shadown;
 		&:last-child{margin-right: 0;}
 		img {width: 100%; height: 219px;}
 		a.title {display: block; height: 54px;line-height: 54px; text-align: center;
@@ -648,4 +650,14 @@
 		background: #fff; border-top: 5px solid $blue;
 		.video-detail {padding:10px; background: $black;width: 575px; margin:auto;}
 	}
+}
+#email-form{width: 400px; padding:20px;
+	.form-list {
+		li {
+			.input-text {border:1px solid #ccc;}
+		}
+	}
+}
+#call-form {width: 400px; padding:20px;text-align: center;
+	.call-me {margin-top: 15px;}
 }

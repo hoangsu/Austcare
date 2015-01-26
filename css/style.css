@@ -8,9 +8,9 @@
   font-weight: normal; font-style: normal; }
 * { margin: 0; padding: 0; }
 
-a { color: inherit; text-decoration: none; }
+a { color: inherit; text-decoration: none; outline: none; }
 
-img { border: none; max-width: 100%; }
+img { border: none; max-width: 100%; outline: none; }
 
 li { list-style-type: none; }
 
@@ -101,6 +101,8 @@ h2 { font-size: 18px; }
 .tab-content { display: none; }
 .tab-content.active { display: block; }
 
+.shadown:hover, .easy-contact .col-group .col img:hover, .question-list ul li .finner:hover, .service-fix .col img:hover, .thv-category li:hover { -moz-box-shadow: 5px 6px 19px 0px #888; -webkit-box-shadow: 5px 6px 19px 0px #888; box-shadow: 5px 6px 19px 0px #888; }
+
 /* Homepage */
 #header { background: #fff; height: 112px; border-bottom: 8px solid #ffcc00; }
 #header .logo { width: 46%; float: left; padding-top: 25px; padding-left: 10px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
@@ -127,9 +129,10 @@ h2 { font-size: 18px; }
 .home-banner .text .caption h1 { font-size: 30px; margin-bottom: 0; line-height: 40px; }
 .home-banner .text .caption h1 span { color: #ffcc00; display: block; }
 .home-banner .text .caption p { font: 20px "iris_azo", Arial, sans-serif; letter-spacing: -0.5px; }
-.home-banner .text .call-me { margin-top: 55px; }
-.home-banner .text .call-me h2 { font: 25.5px/40px "iris_azo", Arial, sans-serif; letter-spacing: -1px; }
-.home-banner .text .call-me h1 { background: url(../images/phone.png) no-repeat 0 7px; padding-left: 52px; background-size: 42px auto; font-size: 35px; display: inline-block; height: 54px; line-height: 50px; }
+
+.call-me { margin-top: 55px; }
+.call-me h2 { font: 25.5px/40px "iris_azo", Arial, sans-serif; letter-spacing: -1px; }
+.call-me h1 { background: url(../images/phone.png) no-repeat 0 7px; padding-left: 52px; background-size: 42px auto; font-size: 35px; display: inline-block; height: 54px; line-height: 50px; }
 
 .register { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 290px; background: #ffcc00; float: right; margin: 15px 20px 15px 48px; padding: 15px 20px; border-radius: 10px; -moz-box-shadow: 5px 5px 0px 0px #c98000; -webkit-box-shadow: 5px 5px 0px 0px #c98000; box-shadow: 5px 5px 0px 0px #c98000; }
 .register h1 { font-size: 26px; }
@@ -150,8 +153,8 @@ h2 { font-size: 18px; }
 
 .why-us h1.title { text-align: center; line-height: 50px; margin: 15px 0 25px; }
 .why-us .bg-wrapper { background: #efefef; padding: 30px 0; }
-.why-us .col { width: 25%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; padding-right: 22px; float: left; }
-.why-us .col:last-child { padding-right: 0; }
+.why-us .col { width: 23.45%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; margin-right: 2%; float: left; }
+.why-us .col:nth-child(4) { margin-right: 0; }
 .why-us .col .bg { margin-bottom: 10px; height: 174px; text-align: center; }
 .why-us .col .bg img { vertical-align: middle; }
 .why-us .col .caption .number { display: inline-block; width: 37px; height: 37px; margin-right: 10px; line-height: 37px; float: left; color: #fff; font-size: 22px; font-weight: bold; border-radius: 100%; text-align: center; margin-left: 10px; }
@@ -173,10 +176,10 @@ h2 { font-size: 18px; }
 .intro .bottom .right img { height: 370px; width: 100%; }
 
 .reg-now { margin-bottom: 40px; margin-top: 10px; }
-.reg-now .inner { position: relative; }
+.reg-now .inner { position: relative; background: #0e38a7; }
 .reg-now .reg { margin-top: 20px; position: absolute; top: 50%; right: 35px; margin-top: -22px; }
 .reg-now .reg .button { font-size: 20px; line-height: 45px; height: 45px; }
-.reg-now .text { text-align: right; overflow: hidden; }
+.reg-now .text { text-align: right; overflow: hidden; padding-right: 290px; }
 .reg-now .text h1 { font-size: 22px; margin-bottom: 15px; color: #ffcc00; }
 .reg-now .text p { font-size: 18px; line-height: 24px; color: #fff; }
 .reg-now.yellow .inner { background: #ffa800; }
@@ -190,7 +193,7 @@ h2 { font-size: 18px; }
 .easy-contact .top p { font-size: 20px; }
 .easy-contact .col-group .col { width: 31%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; margin-right: 3%; text-align: center; float: left; }
 .easy-contact .col-group .col:last-child { margin-right: 0; }
-.easy-contact .col-group .col img { margin-bottom: 20px; width: 45%; }
+.easy-contact .col-group .col img { margin-bottom: 20px; width: 45%; border-radius: 100%; }
 .easy-contact .col-group .col .caption { background: #f2f2f2; padding: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
 .easy-contact .col-group .col .caption h1 { color: #0c2c81; margin-bottom: 20px; font-size: 22px; }
 .easy-contact .col-group .col .caption p { font: 18px/32px Arial, sans-serif; letter-spacing: -1px; }
@@ -432,7 +435,7 @@ h2 { font-size: 18px; }
 .service-fix h1.title { margin: 20px 0 40px; }
 .service-fix .col { width: 29%; margin-right: 6.5%; text-align: center; color: #58595b; float: left; }
 .service-fix .col:last-child { margin-right: 0; }
-.service-fix .col img { margin-bottom: 50px; width: 57%; }
+.service-fix .col img { margin-bottom: 50px; width: 57%; border-radius: 100%; }
 .service-fix .col h2 { font-size: 20px; margin-bottom: 12px; }
 .service-fix .col p { font-size: 17px; line-height: 22px; }
 
@@ -449,7 +452,7 @@ h2 { font-size: 18px; }
 #main.thuvien-page { background: #f2f2f2; }
 #main.thuvien-page .inner { background: #fff; border-top: 5px solid #0e38a7; padding: 24px 45px; }
 #main.thuvien-page .inner h1.title { margin: 20px auto 30px; width: 327px; font-size: 25px; border-top: 2px solid #0e38a7; text-align: center; }
-#main.thuvien-page .inner h1.title span { display: inline-block; background: #fff; padding: 0 15px; margin-top: -20px; }
+#main.thuvien-page .inner h1.title span { display: inline-block; background: #fff; padding: 0 15px; margin-top: -20px; white-space: nowrap; }
 
 .thv-category { margin-bottom: 50px; }
 .thv-category:before, .thv-category:after { content: " "; display: table; }
@@ -505,3 +508,9 @@ h2 { font-size: 18px; }
 #main.thuvien-page-detail .col-left ul li a { display: block; }
 #main.thuvien-page-detail .col-right { overflow: hidden; padding: 25px; background: #fff; border-top: 5px solid #0e38a7; }
 #main.thuvien-page-detail .col-right .video-detail { padding: 10px; background: #282828; width: 575px; margin: auto; }
+
+#email-form { width: 400px; padding: 20px; }
+#email-form .form-list li .input-text { border: 1px solid #ccc; }
+
+#call-form { width: 400px; padding: 20px; text-align: center; }
+#call-form .call-me { margin-top: 15px; }

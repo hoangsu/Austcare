@@ -20,7 +20,7 @@ h1, h2, h3 { font-family: "iris_azo_bold", Arial, sans-serif; font-weight: norma
 
 h1 { text-transform: uppercase; font-size: 22px; margin-bottom: 10px; }
 
-h2 { font-size: 18px; }
+h2, h4 { font-size: 18px; }
 
 .inner { width: 1080px; margin: auto; }
 .inner:before, .inner:after { content: " "; display: table; }
@@ -126,16 +126,16 @@ h2 { font-size: 18px; }
 .home-banner:after { clear: both; }
 .home-banner .text { text-align: right; color: #fff; padding-left: 20%; }
 .home-banner .text .caption { margin-top: 50px; }
-.home-banner .text .caption h1 { font-size: 30px; margin-bottom: 0; line-height: 40px; }
-.home-banner .text .caption h1 span { color: #ffcc00; display: block; }
+.home-banner .text .caption h1, .home-banner .text .caption h2 { font-size: 30px; margin-bottom: 0; line-height: 40px; text-transform: uppercase; }
+.home-banner .text .caption h1 span, .home-banner .text .caption h2 span { color: #ffcc00; display: block; }
 .home-banner .text .caption p { font: 20px "iris_azo", Arial, sans-serif; letter-spacing: -0.5px; }
 
 .call-me { margin-top: 55px; }
 .call-me h2 { font: 25.5px/40px "iris_azo", Arial, sans-serif; letter-spacing: -1px; }
-.call-me h1 { background: url(../images/phone.png) no-repeat 0 7px; padding-left: 52px; background-size: 42px auto; font-size: 35px; display: inline-block; height: 54px; line-height: 50px; }
+.call-me h1, .call-me h2:last-child { background: url(../images/phone.png) no-repeat 0 7px; padding-left: 52px; background-size: 42px auto; font-size: 35px; display: inline-block; height: 54px; line-height: 50px; }
 
 .register { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 290px; background: #ffcc00; float: right; margin: 15px 20px 15px 48px; padding: 15px 20px; border-radius: 10px; -moz-box-shadow: 5px 5px 0px 0px #c98000; -webkit-box-shadow: 5px 5px 0px 0px #c98000; box-shadow: 5px 5px 0px 0px #c98000; }
-.register h1 { font-size: 26px; }
+.register h1, .register h4 { font-size: 18px; text-transform: uppercase; text-align: center; }
 .register .form-list li.control { margin: 13px 0 0; }
 .register .form-list .button { color: #fff; font: bold 28px Arial, sans-serif; text-transform: uppercase; text-align: center; background: url(../images/register-bt.png) no-repeat 0 0 #0e38a7; height: 43px; line-height: 43px; padding: 0 43px; }
 
@@ -144,14 +144,14 @@ h2 { font-size: 18px; }
 .service { padding: 0 46px; text-align: center; }
 .service h1 { margin-bottom: 30px; }
 .service .col { box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; width: 45%; float: left; background: #f2f2f2; padding: 35px; }
-.service .col img { margin-bottom: 20px; width: 36%; }
+.service .col img { margin-bottom: 20px; width: 36%; border-radius: 100%; }
 .service .col h2 { text-transform: uppercase; margin-bottom: 10px; }
 .service .col p { font: 20px/28px "iris_azo", Arial, sans-serif; margin-bottom: 30px; }
 .service .col .button { border-radius: 2px; color: #fff; text-align: center; height: 40px; line-height: 40px; margin-bottom: 2px; padding: 0 40px; }
 .service .col .button:hover { background-color: #fff; border: 2px solid #0e38a7; color: #282828; margin-top: -2px; margin-left: -2px; margin-bottom: 0; }
 .service .col.dv { float: right; }
 
-.why-us h1.title { text-align: center; line-height: 50px; margin: 15px 0 25px; }
+.why-us h1.title, .why-us h2.title { text-align: center; line-height: 50px; margin: 15px 0 25px; font-size: 24px; text-transform: uppercase; }
 .why-us .bg-wrapper { background: #efefef; padding: 30px 0; }
 .why-us .col { width: 23.45%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; margin-right: 2%; float: left; }
 .why-us .col:nth-child(4) { margin-right: 0; }
@@ -165,11 +165,11 @@ h2 { font-size: 18px; }
 .intro .top .left img { height: 380px; width: 100%; }
 .intro .top .left .top-conner { background: url(../images/top-conner.png) no-repeat 0 0; display: block; width: 76px; height: 43px; top: 0; right: -1px; position: absolute; }
 .intro .top .right { background: #0e38a7; color: #fff; padding: 30px 20px 40px; height: 380px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
-.intro .top .right h1 { margin-bottom: 20px; }
+.intro .top .right h1, .intro .top .right h2 { margin-bottom: 20px; text-transform: uppercase; }
 .intro .top .right p { font: 18px/24px "iris_azo_bold", Arial, sans-serif; margin-bottom: 20px; }
 .intro .top .right .click { margin-top: 40px; }
 .intro .bottom .left { background: #fac809; height: 370px; color: #fff; padding: 30px 20px 40px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
-.intro .bottom .left h1 { margin-bottom: 20px; text-align: right; }
+.intro .bottom .left h1, .intro .bottom .left h2 { margin-bottom: 20px; text-transform: uppercase; }
 .intro .bottom .left p { font: bold 18px/24px Arial, sans-serif; margin-bottom: 20px; }
 .intro .bottom .left .click { margin-top: 40px; }
 .intro .bottom .right { float: right; position: relative; width: 50%; margin-left: 25px; }
@@ -189,13 +189,13 @@ h2 { font-size: 18px; }
 
 .easy-contact { margin-bottom: 30px; }
 .easy-contact .top { text-align: center; margin-bottom: 30px; padding: 0 60px; }
-.easy-contact .top h1 { margin-bottom: 20px; }
+.easy-contact .top h1, .easy-contact .top h2 { margin-bottom: 20px; font-size: 24px; text-transform: uppercase; }
 .easy-contact .top p { font-size: 20px; }
 .easy-contact .col-group .col { width: 31%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; margin-right: 3%; text-align: center; float: left; }
 .easy-contact .col-group .col:last-child { margin-right: 0; }
 .easy-contact .col-group .col img { margin-bottom: 20px; width: 45%; border-radius: 100%; }
 .easy-contact .col-group .col .caption { background: #f2f2f2; padding: 20px; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
-.easy-contact .col-group .col .caption h1 { color: #0c2c81; margin-bottom: 20px; font-size: 22px; }
+.easy-contact .col-group .col .caption h1, .easy-contact .col-group .col .caption h3 { color: #0c2c81; margin-bottom: 20px; font-size: 22px; text-transform: uppercase; }
 .easy-contact .col-group .col .caption p { font: 18px/32px Arial, sans-serif; letter-spacing: -1px; }
 
 #cboxLoadedContent .easy-contact { padding-top: 20px; }
@@ -203,7 +203,7 @@ h2 { font-size: 18px; }
 .customer-say { background: url(../images/customer-say.jpg) no-repeat center 0 #0e38a7; margin-bottom: 35px; }
 .customer-say .bg-wrapper { background: url(../images/customer-say1.png) repeat 0 0; padding: 30px 0; }
 .customer-say .bg-wrapper .title { color: #fff; text-align: center; margin-bottom: 50px; }
-.customer-say .bg-wrapper .title h1 { margin-bottom: 20px; padding: 0 20px; }
+.customer-say .bg-wrapper .title h1, .customer-say .bg-wrapper .title h2 { margin-bottom: 20px; padding: 0 20px; font-size: 24px; text-transform: uppercase; }
 .customer-say .bg-wrapper .title p { font-size: 20px; line-height: 28px; }
 .customer-say .bg-wrapper .customer .bubble { border-radius: 10px; background: #fff; padding: 30px 30px 30px 37px; position: relative; }
 .customer-say .bg-wrapper .customer .bubble:after { content: ""; position: absolute; bottom: -31px; right: 13%; background: url(../images/bubble-ar1.png) no-repeat; width: 54px; height: 31px; display: inline-block; }
@@ -326,6 +326,10 @@ h2 { font-size: 18px; }
 .detail-wrapper .content-detail h2 { font-size: 20px; margin-bottom: 20px; margin-top: 10px; }
 .detail-wrapper .content-detail p { margin-bottom: 20px; font-size: 14px; line-height: 19px; }
 
+.detail-wrapper .content-detail.page-detail p { line-height: 22px; margin-bottom: 0; }
+.detail-wrapper .content-detail.page-detail strong { margin: 10px 0; display: block; }
+.detail-wrapper .content-detail.page-detail h3, .detail-wrapper .content-detail.page-detail h4 { margin-top: 20px; }
+
 .share { float: right; margin-right: 60px; width: 300px; margin-top: 40px; }
 .share:before, .share:after { content: " "; display: table; }
 .share:after { clear: both; }
@@ -375,9 +379,10 @@ h2 { font-size: 18px; }
 .agents .tab-content .head .select-city { position: relative; float: right; margin-top: 17px; margin-right: 25px; }
 .agents .tab-content .head .select-city .text-top { display: block; width: 100%; height: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; font-size: 18px; padding-left: 20px; line-height: 44px; cursor: default; background: url(../images/arr-select.png) right 0 no-repeat #fff; background-size: auto 100%; border: 1px solid #999; width: 280px; height: 44px; }
 .agents .tab-content .head .select-city .text-top:focus { background: #0e38a7; }
-.agents .tab-content .head .select-city ul { display: none; background: #fff; border: 1px solid #999; border-top: 0; position: absolute; left: 0; top: 44px; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; }
+.agents .tab-content .head .select-city ul { display: none; background: #fff; border: 1px solid #999; border-top: 0; position: absolute; left: 0; top: 44px; width: 100%; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; max-height: 200px; overflow-y: auto; }
 .agents .tab-content .head .select-city ul li:hover { background: #1e90ff; color: #fff; }
 .agents .tab-content .head .select-city ul li a { display: block; padding: 0 20px; line-height: 40px; }
+.agents .tab-content .agents-list { max-height: 582px; overflow-y: auto; }
 .agents .tab-content .agents-list ul li { border-bottom: 1px solid #c8c8c8; padding: 15px 25px; font-size: 18px; line-height: 30px; font-weight: bold; }
 .agents .tab-content .agents-list ul li:nth-child(2n) { background: #fff; }
 .agents .tab-content .agents-list ul li span.number { float: left; display: block; font-weight: bold; margin-right: 25px; line-height: 43px; }
@@ -400,7 +405,7 @@ h2 { font-size: 18px; }
 .showrooms .col ul li:hover span.number, .showrooms .col ul li:hover h3 { color: #005aab; }
 
 .warranty { padding: 0 100px; margin-bottom: 50px; }
-.warranty h1 { color: #005aab; font-size: 25px; margin: 15px 0 20px; letter-spacing: 0; }
+.warranty h1, .warranty h3 { color: #005aab; font-size: 20px; margin: 15px 0; letter-spacing: 0; }
 .warranty p { line-height: 35px; }
 
 .products { margin-bottom: 40px; }

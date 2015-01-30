@@ -32,7 +32,7 @@
  @include clearfix;padding-bottom: 7px;
 	.text {text-align: right; color: #fff; padding-left: 20%;
 		.caption {margin-top: 50px;
-			h1 {font-size:30px; margin-bottom: 0; line-height: 40px;
+			h1,h2 {font-size:30px; margin-bottom: 0; line-height: 40px;text-transform: uppercase;
 				span {color: $yellow;display: block;}
 			}
 			p {font:20px $IA; letter-spacing: -0.5px;}
@@ -41,7 +41,7 @@
 }
 .call-me { margin-top: 55px;
 	h2 {font: 25.5px/40px $IA; letter-spacing: -1px;}
-	h1 {background: url(../images/phone.png) no-repeat 0 7px;
+	h1,h2:last-child {background: url(../images/phone.png) no-repeat 0 7px;
 	 padding-left: 52px;background-size: 42px auto;
 	 font-size:35px; display: inline-block;
 		height: 54px; line-height: 50px;
@@ -49,7 +49,7 @@
 }
 .register {@include box-sizing();width: 290px; background: $yellow; float: right; margin:15px 20px 15px 48px;
 	padding:15px 20px;border-radius: 10px;@include box-shadow(5px, 5px, 0px, 0px, #c98000) ;
-	h1 {font-size: 26px;}
+	h1,h4 {font-size: 18px; text-transform: uppercase; text-align: center;}
 	.form-list {
 		li.control {margin:13px 0 0;}
 		.button {color:#fff; font:bold 28px $Arial;text-transform: uppercase; text-align: center;
@@ -63,7 +63,7 @@
 	h1 { margin-bottom:30px;}
 	.col {@include box-sizing; width: 45%;float: left;
 		background: $grey;padding:35px;
-		img {margin-bottom: 20px; width:36%;}
+		img {margin-bottom: 20px; width:36%; border-radius: 100%;}
 		h2 { text-transform: uppercase; margin-bottom: 10px;}
 		p {font:20px/28px $IA; margin-bottom: 30px;}
 		.button {border-radius: 2px; color: #fff;text-align: center; height: 40px; line-height: 40px;
@@ -76,7 +76,9 @@
 	}
 }
 .why-us {
-	h1.title {text-align: center;  line-height: 50px; margin: 15px 0 25px;}
+	h1.title,h2.title {text-align: center;  line-height: 50px; margin: 15px 0 25px; font-size: 24px;
+		text-transform: uppercase;
+	}
 	.bg-wrapper {background: #efefef; padding: 30px 0;}
 	.col {width: 23.45%; @include box-sizing; margin-right: 2%; float: left;
 		&:nth-child(4) {margin-right: 0;}
@@ -104,7 +106,7 @@
 		}
 		.right {background: $blue;color: #fff; padding:30px 20px 40px; height: 380px; 
 			@include box-sizing;
-			h1 {margin-bottom: 20px;}
+			h1,h2 {margin-bottom: 20px;text-transform: uppercase;}
 			p {font: 18px/24px $IABold; margin-bottom: 20px; }
 			.click {margin-top: 40px;}
 		}
@@ -112,7 +114,7 @@
 	.bottom {
 		.left {background: #fac809;height: 370px; color: #fff;padding:30px 20px 40px; 
 			@include box-sizing;
-			h1 {margin-bottom: 20px;text-align: right;}
+			h1,h2 {margin-bottom: 20px;text-transform: uppercase;}
 			p {font:bold 18px/24px $Arial;margin-bottom: 20px;}
 			.click {margin-top: 40px;}
 		}
@@ -142,7 +144,7 @@
 }
 .easy-contact { margin-bottom: 30px;
 	.top {text-align: center; margin-bottom: 30px;padding:0 60px;
-		h1 { margin-bottom: 20px;}
+		h1 ,h2{ margin-bottom: 20px;font-size: 24px;text-transform: uppercase;}
 		p {font-size: 20px;}
 	}
 	.col-group {
@@ -150,7 +152,7 @@
 			&:last-child {margin-right: 0;}
 			img {margin-bottom: 20px; width:45%; border-radius: 100%;@extend .shadown;}
 			.caption {background: $grey; padding:20px; @include box-sizing;
-				h1 { color: #0c2c81; margin-bottom: 20px; font-size: 22px;}
+				h1,h3 { color: #0c2c81; margin-bottom: 20px; font-size: 22px;text-transform: uppercase;}
 				p {font:18px/32px $Arial; letter-spacing: -1px;}
 			}
 		}
@@ -161,7 +163,7 @@
 	background: url(../images/customer-say.jpg) no-repeat center 0 $blue;margin-bottom: 35px; 
 	.bg-wrapper {background: url(../images/customer-say1.png) repeat 0 0;padding:30px 0;
 		.title {color: #fff;text-align: center; margin-bottom: 50px;
-			h1 {margin-bottom: 20px; padding:0 20px;}
+			h1,h2 {margin-bottom: 20px; padding:0 20px;font-size: 24px;text-transform: uppercase;}
 			p {font-size: 20px; line-height: 28px}
 		}
 		.customer {
@@ -361,6 +363,11 @@
 		p {margin-bottom: 20px; font-size: 14px; line-height: 19px;}
 	}
 }
+.detail-wrapper .content-detail.page-detail {
+	p {line-height: 22px; margin-bottom: 0;}
+	strong {margin: 10px 0; display: block;}
+	h3,h4 {margin-top: 20px;}
+}
 .share { float: right; @include clearfix; margin-right: 60px; width: 300px; margin-top: 40px;
 	.title{font-size: 14px; margin-right: 16px; float: left; line-height: 28px;}
 	li{float: left; margin-right: 15px; 
@@ -437,7 +444,7 @@
 					&:focus {background: $blue;}
 				}
 				ul {display: none; background: #fff; border:1px solid #999; border-top: 0;position: absolute;
-					left:0; top:44px; width: 100%; @include box-sizing;
+					left:0; top:44px; width: 100%; @include box-sizing;max-height: 200px; overflow-y:auto;
 					li{
 						&:hover {background:#1e90ff; color: #fff; }
 						a {display: block;padding:0 20px;line-height: 40px;}
@@ -445,7 +452,7 @@
 				}
 			}
 		}
-		.agents-list {
+		.agents-list {max-height: 582px; overflow-y:auto;
 			ul {
 				li {border-bottom: 1px solid #c8c8c8; padding:15px 25px;font-size: 18px;
 				 line-height: 30px;font-weight: bold;
@@ -482,7 +489,7 @@
 	}
 }
 .warranty { padding:0 100px; margin-bottom: 50px;
-	h1 {color: $blue1; font-size: 25px; margin: 15px 0 20px; letter-spacing: 0;}
+	h1,h3 {color: $blue1; font-size: 20px; margin: 15px 0; letter-spacing: 0;}
 	p {line-height: 35px; }
 }
 .products { margin-bottom: 40px;

@@ -3,10 +3,33 @@
 
 /* Homepage */
 #header {background: #fff; height: 112px; border-bottom: 8px solid $yellow;
-	.logo {width: 46%;float:left; padding-top: 25px; padding-left: 10px; @include box-sizing();}
-	.menu {width: 50%; float: right; padding-top: 41px;}
+	.logo {float:left; padding-top: 25px; padding-left: 10px; @include box-sizing();}
+	.menu { float: right; padding-top: 41px;}
+	@media (max-width: $tablet) {
+		height: 81px;
+		.inner {padding:0;}
+		.logo {float: right; padding:14px ; width: 89%;
+			img {height: 50px;}
+		}
+		.menu {float: left; padding:0;}
+	}
+	@media (max-width: $mobile) {
+		height: 40px;
+		.logo {padding:7px ;width: 87%;
+			img {height: 26px;}
+		}
+	}
 }
-.menu {
+#menu-icon{display: inline-block;text-indent: -99999px;
+	background: url(../images/menu-icon.png) no-repeat center center #f3f3f3; width: 81px; height: 81px; 
+	@media (max-width: $mobile) {
+		height: 40px;width: 40px;background-size: 50%;
+	}
+	@media (min-width: $tablet+1) {
+		display: none;
+	}
+}
+.menu {position: relative; z-index: 1;
 	li {float: left; position: relative; padding:5px 15px;
 		a {font:20px/26px $IABold; display: inline-block;white-space: nowrap;
 			&.home {text-indent: -99999px; background: url(../images/home-icon.png) no-repeat 0 0;width: 30px; height: 27px;}
@@ -14,7 +37,7 @@
 		&:first-child {margin-left:0;
 			&:hover {background: none}
 		}
-		ul.sub-menu {display: none; position: absolute; top:37px; left:0;
+		ul.sub-menu {display: none; position: absolute; top:36px; left:0; z-index: 999;
 			@include box-shadow(3px, 3px, 7px, 0px, rgba(0, 0, 0, 0.5)); background: #3b3b3b;
 			li {background: #3b3b3b; padding:5px 12px;border-bottom: 1px solid #727272; display: block;
 				color: #fff;width: 100%;@include box-sizing;
@@ -27,16 +50,73 @@
 			ul.sub-menu {display: block;}
 		}
 	}
+	@media (max-width: $tablet) {
+		>ul {display: none; position: absolute; background: #fff; top:80px; left:0; min-width: 300px;
+			@include box-shadow(2px, 2px, 5px, 0px, rgba(0, 0, 0, 0.3));
+		}
+		li {float: none; display: block; font-weight: normal; border-bottom: 1px solid #ddd; padding:0;
+			a {display: block; padding:15px 20px; font-weight: normal; font-family: $IA;
+				&.home {background: no-repeat; width: auto; height: auto; text-indent: 0;}
+			}
+			ul.sub-menu {position: static; background: $yellow; @include box-shadow(null,null,null,null,none);
+				li {background: $yellow; color: inherit; border-bottom: 1px solid #fff;
+					a {padding:5px 20px;}
+					&:hover {background: $yellow; color: inherit;}
+				}
+			}
+			&:hover {background: none;
+				ul.sub-menu {display: none;}
+			}
+			&.has-child {
+				> a {background: url("../images/mobile-arrow-side-icon.png") no-repeat 95% center;}
+			}
+			&.has-child.active {
+				> a{background-image: url("../images/mobile-arrow-icon.png");}
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		>ul {top:40px;}
+		li {
+			a {padding:7px 10px; font-size: 16px;}
+			ul.sub-menu {
+				li {
+					a {padding:0px 10px;}
+					&:hover {background: $yellow; color: inherit;}
+				}
+			}
+			&.has-child > a{background-size: 11px}
+			&.has-child.active > a{background-size: 17px}
+		}
+	}
+	@media (min-width: $tablet+1) {
+		>ul {display: block !important}
+	}
 }
 .home-banner {background: url(../images/home-banner.jpg) no-repeat center 0 $blue;
- @include clearfix;padding-bottom: 7px;
-	.text {text-align: right; color: #fff; padding-left: 20%;
+ @include clearfix;padding-bottom: 7px; 
+	.text {text-align: right; color: #fff; padding-left: 20%; overflow: hidden;
 		.caption {margin-top: 50px;
 			h1,h2 {font-size:30px; margin-bottom: 0; line-height: 40px;text-transform: uppercase;
 				span {color: $yellow;display: block;}
 			}
 			p {font:20px $IA; letter-spacing: -0.5px;}
 		}
+	}
+	@media (max-width: $tablet) {position: relative;
+		background-size: cover !important;
+		.text {padding-left: 11%;
+			.caption {margin-top: 30px;
+				p {line-height: 30px;}
+			}
+		}
+	}
+	@media (max-width: $mobile) { background: none !important;padding:0; overflow: hidden;
+		.hide-desktop { position:relative;float: right; right: 50%; margin-bottom: 15px;
+			img {height: 180px; max-width: none; position: relative; right:-50%;}
+		}
+		.inner {padding:0;}
+		.text {width: 100%; float: none; padding:0;}
 	}
 }
 .call-me { margin-top: 55px;
@@ -46,26 +126,49 @@
 	 font-size:35px; display: inline-block;
 		height: 54px; line-height: 50px;
 	}
+	@media (max-width: $tablet) {
+		margin-top: 30px;
+	}
 }
 .register {@include box-sizing();width: 290px; background: $yellow; float: right; margin:15px 20px 15px 48px;
 	padding:15px 20px;border-radius: 10px;@include box-shadow(5px, 5px, 0px, 0px, #c98000) ;
 	h1,h4 {font-size: 18px; text-transform: uppercase; text-align: center;}
 	.form-list {
 		li.control {margin:13px 0 0;}
-		.button {color:#fff; font:bold 28px $Arial;text-transform: uppercase; text-align: center;
+		.button {color:#fff; font:bold 18px $Arial;text-transform: uppercase; text-align: center;
 			background: url(../images/register-bt.png) no-repeat 0 0 $blue; height: 43px; 
-			line-height: 43px;padding:0 43px;
+			line-height: 43px;padding:0 43px;cursor: pointer;
 		}
 	}
+	@media (max-width: $tablet) {
+		width: 26%;
+	}
+	@media (max-width: $mobile) {padding:15px 10%;
+		width: 100%; float: none;@include box-shadow(null,null,null,null,none);border-radius: 0; margin:0;
+		h1,h4 {font-size: 14px;}
+		.form-list {
+			label {font-size: 13px;}
+			li.control {text-align: center;
+				.button {line-height: 30px; height: 30px; font-size: 16px; padding:0 30px;}
+			}
+		} 
+	}
 }
-#cboxLoadedContent .register{ margin:0;width: 500px; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;}
+#cboxLoadedContent .register{ margin:0; box-shadow: none; -webkit-box-shadow: none; -moz-box-shadow: none;min-width: 255px;
+	@media (max-width: $mobile) {
+		padding:15px 10px;
+	}
+	@media (min-width: $mobile+1) {
+		width: 500px;
+	}
+}
 .service { padding:0 46px; text-align: center;
-	h1 { margin-bottom:30px;}
+	h1.title { margin-top:0px;}
 	.col {@include box-sizing; width: 45%;float: left;
 		background: $grey;padding:35px;
 		img {margin-bottom: 20px; width:36%; border-radius: 100%;}
 		h2 { text-transform: uppercase; margin-bottom: 10px;}
-		p {font:20px/28px $IA; margin-bottom: 30px;}
+		p {font-family:  $IA; margin-bottom: 30px;}
 		.button {border-radius: 2px; color: #fff;text-align: center; height: 40px; line-height: 40px;
 			margin-bottom: 2px;padding:0 40px;
 			&:hover {background-color: #fff; border:2px solid $blue; color: $black; margin-top: -2px; margin-left: -2px;
@@ -74,16 +177,20 @@
 		}
 		&.dv {float: right;}
 	}
+	@media (max-width: $mobile) {
+		padding:0;
+		.col {width: 100%; padding:20px 10px; float: none;
+			p {margin-bottom: 15px;}
+			.button {height: 25px; line-height: 25px; padding:0 15px;}
+		}
+	}
 }
 .why-us {
-	h1.title,h2.title {text-align: center;  line-height: 50px; margin: 15px 0 25px; font-size: 24px;
-		text-transform: uppercase;
-	}
 	.bg-wrapper {background: #efefef; padding: 30px 0;}
 	.col {width: 23.45%; @include box-sizing; margin-right: 2%; float: left;
 		&:nth-child(4) {margin-right: 0;}
 		.bg { margin-bottom: 10px;height: 174px;text-align: center;
-			img {vertical-align: middle;}
+			img {vertical-align: middle; max-width: 80%;}
 		 }
 		.caption {
 			.number {display: inline-block; width: 37px; height: 37px; margin-right: 10px;
@@ -92,6 +199,15 @@
 				margin-left: 10px;
 			}
 			h3 {font:bold 14px/37px $Arial; text-transform: uppercase;}
+		}
+	}
+	@media (max-width: $tablet) {
+		.inner {padding:0;}
+		.col {width: 46%; margin:0 2% 20px;
+			.caption {
+				.number {width: 20px; height: 20px; line-height: 20px; font-size: 14px; margin-left: 0; margin-right: 5px;}
+				h3 {line-height: 17px; font-size: 12px; overflow: hidden;}
+			}
 		}
 	}
 }
@@ -122,15 +238,37 @@
 			img {height: 370px;width:100%;}
 		}
 	}
+	@media (max-width: $tablet) {
+		.top {background: $blue;
+			.left {
+				img {height: auto;}
+			}
+			.right {height: auto; }
+		}
+		.bottom {background: #fac809;
+			.left {height: auto;}
+			.right {
+				img {height: auto;}
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		margin-top: 0px;
+		.left,.right { width: 100% !important;}
+		img {margin-bottom: 20px;}
+		h2 {margin-bottom: 15px !important}
+		p {font: normal 14px/18px $IA !important;}
+		.button {font-size: 14px !important}
+	}
 }
-.reg-now {margin-bottom: 40px;margin-top:10px;
-	.inner { position: relative; background: $blue;}
-	.reg {margin-top: 20px;position: absolute; top:50%; right:35px; margin-top: -22px;
+.reg-now {margin-bottom: 20px;margin-top:10px;@include clearfix;
+	.inner { position: relative; padding:0; }
+	.reg {position: absolute; top:50%; right:35px; margin-top: 15px;
 		.button {font-size: 20px; line-height: 45px; height:45px;}
 	}
 	.text {text-align: right; overflow:hidden; padding-right: 290px;
 		h1 {font-size: 22px; margin-bottom: 15px; color: $yellow;}
-		p {font-size: 18px;line-height: 24px; color: #fff; }
+		p {color: #fff; }
 	}
 	&.yellow {
 		.inner {
@@ -141,19 +279,53 @@
 			p {color: $black; }
 		}
 	}
+	@media (max-width: $tablet){
+		.reg {right:15px;
+			.button {height: inherit;line-height: 30px; font-size: 16px; padding:0 10px 0 5px;
+				span {padding-left: 20px;}
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		.inner { position:relative;
+	   		float: right; right: 50%; width: auto;
+	    	img { position: relative;right:-50%; max-width: none; height: 110px; width: 100%;}
+		}
+		.reg {right:-66px;
+			.button {font-size: 14px; line-height: 25px; height: 25px;}
+		}
+	}
 }
 .easy-contact { margin-bottom: 30px;
 	.top {text-align: center; margin-bottom: 30px;padding:0 60px;
-		h1 ,h2{ margin-bottom: 20px;font-size: 24px;text-transform: uppercase;}
-		p {font-size: 20px;}
 	}
 	.col-group {
 		.col {width: 31%; @include box-sizing; margin-right: 3%;text-align: center;float: left;
 			&:last-child {margin-right: 0;}
-			img {margin-bottom: 20px; width:45%; border-radius: 100%;@extend .shadown;}
+			img {margin-bottom: 20px; max-width:45%; border-radius: 100%;@extend .shadown;}
 			.caption {background: $grey; padding:20px; @include box-sizing;
-				h1,h3 { color: #0c2c81; margin-bottom: 20px; font-size: 22px;text-transform: uppercase;}
-				p {font:18px/32px $Arial; letter-spacing: -1px;}
+				h1,h3 { color: #0c2c81; margin-bottom: 20px; font-size: 18px;text-transform: uppercase;}
+				p {font:16px/24px $Arial; }
+			}
+		}
+	}
+	@media (max-width: $tablet) {
+		.top {margin-bottom: 15px;}
+		.col-group{
+			.col {margin-bottom: 10px;
+				img {margin-bottom: 10px;}
+				.caption {padding:10px;}
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		margin-bottom: 0px;
+		.col-group {
+			.col {width: 100%; float: none; margin:0 0 20px;
+				.caption {
+					h1,h3 { font-size: 15px; margin-bottom: 10px}
+					p {font:14px/18px $Arial; }
+				}
 			}
 		}
 	}
@@ -162,11 +334,10 @@
 .customer-say {
 	background: url(../images/customer-say.jpg) no-repeat center 0 $blue;margin-bottom: 35px; 
 	.bg-wrapper {background: url(../images/customer-say1.png) repeat 0 0;padding:30px 0;
-		.title {color: #fff;text-align: center; margin-bottom: 50px;
-			h1,h2 {margin-bottom: 20px; padding:0 20px;font-size: 24px;text-transform: uppercase;}
-			p {font-size: 20px; line-height: 28px}
+		div.title {color: #fff;text-align: center; margin-bottom: 50px;
+			h1.title,h2.title {margin:0 0 20px; padding:0 20px;}
 		}
-		.customer {
+		.customer {@include clearfix;
 			.bubble {border-radius: 10px; background: #fff; padding:30px 30px 30px 37px;
 			 position: relative;
 				&:after {content: ""; position: absolute; bottom: -31px; right:13%; 
@@ -201,9 +372,52 @@
 			}
 		}
 	}
+	@media (max-width: $tablet) {
+		background-size: cover;
+		.bg-wrapper {padding:20px 0;
+			.customer {
+				.person{height: auto;
+					img {max-width: 24%;margin:0; height: auto;}
+					p {width: 72%; @include box-sizing; }
+				}
+				.left {
+					.person {
+						p{ float: left; padding: 20px 10px 0 0;}
+					}
+				}
+				.right{
+					.person {
+						img {margin:0; float: left;}
+						p{float: right; padding: 20px 0 0 10px;}
+					}
+				}
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		.bg-wrapper {
+			.customer {
+				.bubble {padding:15px;
+					p {font-size: 14px; line-height: 18px;}
+				}
+				.person{
+					p {font-size: 13px; line-height: 20px;}
+				}
+				.left {width: 100%; float: none; padding:0; margin-bottom: 20px;}
+				.right{width: 100%; float: none;padding:0;}
+			}
+		}
+	}
 }
 .fb-comment {margin-bottom: 35px;}
-.fb-likebox {margin-bottom: 35px;}
+.fb-likebox {margin-bottom: 35px;
+	.inner {
+		@media (max-width: $inner) {
+			overflow: hidden;
+		}
+	}
+	
+}
 
 #footer {
 	height: 54px; background: $blue; color: #fff;
@@ -211,14 +425,14 @@
 		p {text-transform: uppercase; line-height: 54px; font-size: 12px;}
 		img {vertical-align: middle; margin-left: 20px; padding-bottom: 5px;}
 	}
-	.footer-menu {
+	.footer-menu {float: right;
 		li {line-height: 54px;float: left; white-space: nowrap;
 			a {display: inline-block;border-right:1px solid #fff;font:14px/14px $IA;
 			 padding:0 12px;
 				&:hover {color: $yellow}
 			}
-			&:first-child {
-				a {border-left:1px solid #fff;}
+			&:last-child {
+				a {border-right: 0;}
 			}
 		}
 	}
@@ -237,26 +451,51 @@
 			}
 		}
 	}
+	@media (max-width: $tablet) {height: auto;
+		.footer-logo {width: 100%; margin:0; text-align: center}
+		.footer-menu{width: 100%; @include clearfix; text-align: center;
+			ul {
+				li {line-height: 30px; float: none; display: inline-block; vertical-align: top;
+					a {margin:10px 0;}
+				}
+			}
+		}
+		.footer-social {width: 100%;text-align: center; margin: 20px 0;
+			li {line-height: 30px; display: inline-block;vertical-align: top;float: none;
+				a {text-align: left;}
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		.footer-logo {
+			p {font-size: 10px;}
+		}
+		.footer-social {margin:10px 0;}
+		.footer-menu{ 
+			ul li a {font-size: 12px;}
+		}
+	}
 }
 #chat-me {display: inline-block; position: fixed; right: 5px; bottom:10px;
 	.close {position: absolute; font-size: 20px; font-weight: bold; right:5px; top:0px;}
 	.bubble {text-align: right; background: $yellow; padding:20px;position: relative;@include box-sizing;
+		border: 1px solid #fff;
 		&:after {content: ""; position: absolute; bottom:-33px; right:53px; background: url(../images/arr-c.png) 0 0;
 			width: 18px; height: 33px; display: inline-block;
 		}
-		h1 {font:24px $Arial; text-transform: none;}
-		h2 {font:20px $Arial;text-transform: none;}
+		h1 {font:18px $Arial; text-transform: none;}
+		h2 {font:16px/22px $Arial;text-transform: none;}
 		p {font:bold 16px $Arial; margin: 10px 0;}
 	}
 	.click {float: right;border:4px solid #fff; @include box-shadow(2px, 2px, 5px, 0px, rgba(0, 0, 0, 0.6));
-		display: inline-block;border-radius: 5px;margin-top: 39px;
+		display: inline-block;border-radius: 5px;margin-top: 39px;border-width: 1px;
 		.button {border-radius: 5px;background: $blue;}
 	}
 }
 /* FAQ */
 .question-list { margin-bottom: 20px;
 	h1.title {
-		font-size: 30px; margin:20px 0 40px; text-align: center;
+		margin:20px 0 40px; text-align: center;
 	}
 	ul { @include clearfix;
 		li {float: left; width: 20%; @include box-sizing; padding:0 12px;
@@ -274,11 +513,37 @@
 			}
 		}
 	}
+	@media (max-width: $tablet) {
+		ul li {
+			.finner {height: auto;
+				.img-wrap {height: auto;}
+			}
+		}
+	}
+	@media (max-width: $mobile) {
+		h1.title {
+			margin:10px 0 20px; text-align: center;
+		}
+		ul{
+			&:before,&:after {display: none;}
+			li {width: 49%;  padding:0 10px;
+				&:first-child {padding:0 10px;}
+				&:last-child{padding:0 10px;}
+				.finner {min-height: 170px; padding:10px;
+					h3 {line-height: 18px; font-size: 12px; margin-top: 10px;}
+				}
+			}
+		} 
+	}
 }
 /* News new */
 .top-nmenu {position: relative;z-index: 10; @include clearfix(); margin-bottom: 26px;
 	height: 51px; background: #0064be;color: #fff;
 	h1 {display: inline-block;  padding-left: 15px; line-height: 51px; white-space: nowrap;}
+	@media (max-width: $mobile) {
+		height: auto; background: none;
+		h1 {line-height: 40px; margin:0; height: 40px; background: $blue; display: block;}
+	}
 }
 .nmenu {float: right; margin-top: 12px;  margin-right: 10px;color: $black;
 	li {background: #fff;
@@ -298,6 +563,9 @@
 			.sub-menu {display: block;}
 		}
 	} 
+	@media (max-width: $mobile) {float: none;
+		>li {float: none; width: 80%; margin:0 auto 10px;}
+	}
 }
 .flat-news { margin-bottom: 70px;
 	.full-inner {@include clearfix(); margin:0 -10px 30px;}
@@ -341,6 +609,13 @@
 			.caption-inner  {padding-right: 5px;}
 		}
 	}
+	@media (max-width: $mobile) {
+		.col {float: none; height: auto; margin-bottom: 40px;
+			img {height: auto;}
+		}
+		.bignews {width:100%; }
+		.smallnews {width: 100%;}
+	}
 }
 /* News detail */
 #main.detail-page {background: $grey;
@@ -362,6 +637,17 @@
 		h2 {font-size: 20px; margin-bottom: 20px; margin-top: 10px;}
 		p {margin-bottom: 20px; font-size: 14px; line-height: 19px;}
 	}
+	@media (max-width: $tablet) {
+		width: auto;
+		h1.title {font-size: 20px; margin-bottom: 20px;}
+		 .content-detail {padding-left: 0px;}
+	}
+	@media (max-width: $mobile) {
+		h1.title {font-size: 16px;}
+		.content-detail {
+			img {height: auto !important}
+		}
+	}
 }
 .detail-wrapper .content-detail.page-detail {
 	p {line-height: 22px; margin-bottom: 0;}
@@ -373,6 +659,12 @@
 	li{float: left; margin-right: 15px; 
 		img{width: 28px; vertical-align: middle;}
 		&:last-child{margin-right: 0;}
+	}
+	@media (max-width: $tablet) {
+		width: 236px; 
+	}
+	@media (max-width: $mobile) {
+		 margin-right:0; margin-top: 10px;
 	}
 }
 /* relates news */
@@ -410,14 +702,86 @@
 			img {height: 324px; width: 100%;}
 		}
 	}
+	@media (max-width: $tablet) {
+		.group-box {
+			.image {
+				img {height: 300px;}
+			}
+			.text {padding:0px 10px 59px 16px; height: 300px;
+				h1.title-box{font-size: 16px; line-height: 22px;}
+			}
+		} 
+	}
+	@media (max-width: $mobile) {
+		.left {float: left; width: 100%;}
+		.right {float: right; width: 100%;}
+		.group-box { margin-bottom: 15px;
+			.image {width: 100%; float: none;
+				img {height: auto;}
+			}
+			.text { height: auto;width: 100%; float: none; padding-left:10px;
+				.other {bottom:10px; left:10px;}
+			}
+		} 
+	}
 }
 /* Tu Van*/
 .tv-banner {
 	background: url(../images/tv-banner.jpg) no-repeat center center;background-size: cover;
 }
+.arrow-left,.arrow-right {position: absolute; top:50%;margin-top: -20px;width: 0; height: 0; 
+	border-top: 20px solid transparent;border-bottom: 20px solid transparent; }
+.arrow-left {border-right:20px solid white;  left: -20px;}
+.arrow-right {border-left:20px solid white;  right: -20px; }
+
+.box {background: #fff;@include clearfix; margin-bottom: 37px;
+  .text{background: #fff;float: left; position: relative;padding-bottom: 100px;
+    @include box-sizing; width: 50%;
+    h1 {font-size: 22px; color:#fff; height: 43px; line-height: 43px; padding-left: 30px;} 
+    .box-wrapper {font:bold 18px/24px $Arial;padding:30px;}
+    .other {position:absolute;bottom:27px; left:38px; white-space: nowrap;width: 100%;
+      @include box-sizing;padding-right: 63px;
+      .button { 
+        span {background: url(../images/arr-w.png) no-repeat right center; padding-right: 26px;
+        display: inline-block;font-weight: normal;}
+      }
+      .product-logo {float: right;}
+    }
+  }
+  .image { float: left;width: 50%;
+    img {min-height: 318px; width: 100%;}
+  }
+  @media (max-width: $tablet) {
+  	.text {
+  		.box-wrapper {padding:15px 20px; font-size: 16px; font-weight: normal;
+  			strong {font-weight: normal;}
+  		}
+  		.other {
+  			.product-logo {
+  				width: 50%; display: inline-block;
+  			}
+  		}
+  	}
+  }
+  @media (max-width: $mobile) {
+  	.text {width: 100%; float: none; height: auto !important; padding-bottom: 70px;
+  		h1 {font-size: inherit; height: 30px; line-height: 30px; padding-left: 15px;}
+  		.box-wrapper {padding:0px 15px 15px; font-size: 14px; }
+  		.other {left:10px; padding-right:20px;}
+  	}
+  	.image {width: 100%; float: none; height: auto !important;
+  		img {min-height: 0;}
+  	}
+  }
+}
+
 .buying-guide {text-align: center; margin-bottom: 50px;
 	h2 {font-size: 22px; text-transform: uppercase; margin-bottom: 22px;}
 	p {font-size: 22px; line-height: 30px;}
+	@media (max-width: $mobile) {margin-bottom: 30px;
+		h2 {font-size: 16px; margin-bottom: 10px;}
+		p {font-size: 14px; line-height: 18px;}
+	}
 }
 .agents { margin-bottom: 40px;
 	h1.title {text-align: center; margin-bottom: 30px;}
@@ -452,16 +816,45 @@
 				}
 			}
 		}
-		.agents-list {max-height: 582px; overflow-y:auto;
+		.agents-list {max-height: 450px; overflow-y:auto;
 			ul {
 				li {border-bottom: 1px solid #c8c8c8; padding:15px 25px;font-size: 18px;
-				 line-height: 30px;font-weight: bold;
+				 line-height: 30px;font-weight: 300;
 					&:nth-child(2n) {background: #fff;}
 					span.number {float: left; display: block;font-weight: bold;
 					 margin-right: 25px; line-height: 43px;}
 					>div {overflow: hidden;}
+					p:first-child {font-weight: bold;}
 				}
 			}
+		}
+	}
+	@media (max-width: $mobile) {
+		h1.title {margin-bottom: 15px;}
+		.tabs {@include clearfix;
+			li {font-size:14px; height: 42px; line-height: 42px;
+				&.active {background-size: 15px;}
+			}
+		}
+		.tab-content {
+			.head { height: auto; padding: 20px 0;
+				h1 {line-height: 20px; font-size: 15px; display: block;}
+				.select-city { float: none;margin:0;
+					.text-top {height: 25px; line-height: 25px; font-size: 14px; width: 90%; margin:auto;}
+					> ul {top:25px; width: 90%; left:5%;
+						li {
+							a {line-height: 30px; padding:0 10px;}
+						}
+					}
+				}
+			}
+			.agents-list{
+				ul {
+					 li {font-size: 14px; line-height: 22px; padding:10px;
+					 	 span.number {margin-right: 10px; }
+					 }
+				} 
+			} 
 		}
 	}
 }
@@ -480,21 +873,39 @@
 					 margin-right: 11px;}
 				>div {overflow: hidden;}
 				h3 {font:bold 18px/30px $Arial;}
-				p {font-weight: bold; font-size:15px; line-height: 19px;}
+				p {font-weight: 300; font-size:15px; line-height: 19px;}
 				&:hover {
 					span.number,h3 {color: $blue1;}
 				}
 			}
 		}
 	}
+	@media (max-width: $mobile) {
+		.col {width: 100%; margin:0; float: none;
+			.head {height: 35px; line-height: 35px; 
+				h1 {font-size: 15px; line-height: 35px;}
+			}
+			ul {
+				li { padding:10px;
+					span.number {font-size: 15px; line-height: 30px;}
+					h3 {font-size: 15px; line-height: 22px;}
+					p {font-size: 14px;}
+				}
+			}
+		}
+	}
 }
-.warranty { padding:0 100px; margin-bottom: 50px;
-	h1,h3 {color: $blue1; font-size: 20px; margin: 15px 0; letter-spacing: 0;}
-	p {line-height: 35px; }
+.warranty { padding:0 9%; margin-bottom: 50px;
+	h1,h3 {color: $blue1; font-size: 22px; margin: 15px 0; letter-spacing: 0;}
+	p {line-height: 22px; }
+	@media (max-width: $mobile) {
+		padding:0 10px;
+		h1,h3 {font-size: 16px; line-height: 24px;}
+	}
 }
 .products { margin-bottom: 40px;
 	h1.title { margin:40px 0; text-align: center; letter-spacing: 0;}
-	.thumbnail {width: 59%; float: left; @include box-sizing;  padding:0 28px 0 70px; }
+	.thumbnail {width: 100%; float: left; @include box-sizing;  padding:0 28px 0 70px; }
 	.specifications {width: 41%; float: right; @include box-sizing;
 		li {@include clearfix; margin-bottom: 17px;
 			.wrapper-img {background: #e6e7e9; width: 116px; height: 100px; float: left; margin-right: 30px;
@@ -522,6 +933,17 @@
 			}
 		}
 	}
+	@media (max-width: $mobile) {
+		h1.title { margin:15px 0; }
+		ul {
+			li {width: 100%; margin-right: 0%; height: auto;
+				.wrapper-img {height: auto;}
+				.text { height: auto; padding:10px; min-height: 44px;
+					h3 {font-size: 15px;}
+				}
+			}
+		}
+	}
 }
 .printed { @extend .brands;
 	ul {
@@ -529,16 +951,28 @@
 			&:last-child {margin-right: 0;}
 		}
 	}
+	@media (max-width: $mobile) {
+		ul {
+			li {width: 49%; margin-right: 2%; height: auto;
+				&:nth-child(2n) {margin-right: 0;}
+				.wrapper-img {height: 200px;}
+			}
+		}
+	}
 }
 /* dich vu */
 .dv-banner {background: url(../images/dv-banner.jpg) no-repeat center center; height: 282px;background-size: cover;}
 .service-fix { padding-bottom:50px; text-align: center;
-	h1.title {margin: 20px 0 40px;}
 	.col {width: 29%; margin-right:6.5%;text-align: center;color: #58595b;float: left;
 		&:last-child {margin-right: 0;}
-		img {margin-bottom: 50px; width:57%; @extend .shadown;border-radius: 100%;}
+		img {margin-bottom: 50px; max-width:57%; @extend .shadown;border-radius: 100%;}
 		h2 {font-size: 20px; margin-bottom: 12px;}
-		p {font-size: 17px;line-height: 22px;}
+	}
+	@media (max-width: $mobile) {
+		.col {width: 100%; margin:0; float: none;
+			img {max-width: 40%; margin:20px 0 20px;}
+			h2 {font-size: inherit;}
+		}
 	}
 }
 .enjoy{ margin-bottom: 40px;
@@ -547,9 +981,23 @@
 			img {width:350px;}
 		}
 		.text {color: #fff;
-			h1 { margin:20px 0;}
-			p {font-weight: bold;font-size: 20px;}
-			a.button {margin-top: 70px;}
+			h1 { margin:20px 0;color: rgba(0, 0, 0, 0.8);}
+			p {font-weight: 300;font-size: 16px;color: rgba(0, 0, 0, 0.8);}
+			a.button {margin-top: 70px; font-size: 16px;}
+		}
+	}
+	@media (max-width: $mobile) { 
+		.inner {padding:10px;
+			.wrapper-img {padding:3px; float: none; margin-right: 0;
+				img {width:100%;}
+			}
+			.text {text-align: center; color: #fff;
+				h1 {margin-bottom: 10px;color: #fff;}
+				p {font-size: 14px; font-weight: normal;color: #fff;
+					strong {font-weight: normal;}
+				}
+				a.button {margin-top: 20px; font-size: 14px; margin-bottom: 15px;}
+			}
 		}
 	}
 }
@@ -559,6 +1007,11 @@
 		h1.title {margin:20px auto 30px; width: 327px; font-size: 25px; border-top: 2px solid $blue;text-align: center;
 			span {display: inline-block; background: #fff; padding:0 15px;margin-top: -20px;
 				white-space: nowrap;
+			}
+		}
+		@media (max-width: $mobile) {
+			h1.title {width: 90%; font-size: 15px; margin-top:40px;
+				span {margin-top: -12px;}
 			}
 		}
 	}
@@ -572,6 +1025,11 @@
 			font-size: 20px; 
 			font-weight: bold;background: $blue; color: #fff;
 			&:hover {background: $yellow; color: $black;}
+		}
+	}
+	@media (max-width: $mobile) {
+		li {width: 100%; margin:0 0 20px;
+			img {height: auto;}
 		}
 	}
 }
@@ -658,13 +1116,23 @@
 		.video-detail {padding:10px; background: $black;width: 575px; margin:auto;}
 	}
 }
-#email-form{width: 400px; padding:20px;
+
+#call-form { padding:20px;text-align: center;min-width: 260px; @include box-sizing;
+	.call-me {margin-top: 15px;}
+	@media (max-width: $mobile) {
+		padding:15px 10px; 
+		span {font-size: 15px !important;}
+	}
+	@media (min-width: $mobile+1) {
+		width: 500px;
+	}
+}
+#email-form{@extend #call-form; text-align: left;
+	h3 {text-align: center;}
 	.form-list {
 		li {
 			.input-text {border:1px solid #ccc;}
+			&.control {text-align: center;}
 		}
 	}
-}
-#call-form {width: 400px; padding:20px;text-align: center;
-	.call-me {margin-top: 15px;}
 }

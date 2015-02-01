@@ -32,5 +32,19 @@ $(document).ready(function() {
 	});
 	$(".group1").colorbox({rel:'group1'});
 	$(".group2").colorbox({rel:'group2'});
-	$(".inline").colorbox({inline:true});
+	$(".inline").colorbox({inline:true, maxWidth:"97%"});
+
+	/*Responsive*/
+	$("#menu-icon").click(function() {
+		$(this).next("ul").slideToggle();
+		$(".menu > ul > li").each(function() {
+			if($(this).children('.sub-menu').length != 0){
+				$(this).addClass("has-child");
+				$(this).click(function() {
+					$(this).toggleClass('active');
+					$(this).children('.sub-menu').slideToggle();
+				});
+			}
+		});
+	});
 });

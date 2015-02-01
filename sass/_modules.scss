@@ -22,24 +22,60 @@ img {border:none; max-width: 100%; outline: none;}
 li {list-style-type: none;}
 body {font:14px $Arial; color:$black; background: url(../images/bg.png) repeat 0 0; line-height: 1.2;}
 h1, h2, h3 {font-family: $IABold;font-weight: normal;line-height: 1.22;}
-h1 {text-transform: uppercase; font-size:22px; margin-bottom: 10px;}
-h2,h4 {font-size: 18px;}
-.inner {width:1080px; margin:auto; @include clearfix;
-  @media (max-width: 1080px) {
-    width: 100%; padding:0 30px; @include box-sizing;
+h1 {text-transform: uppercase; font-size:22px; margin-bottom: 10px;
+  @media (max-width: $mobile) {
+    font-size: 15px;
+  }
+}
+h2,h4 {font-size: 18px;
+   @media (max-width: $mobile) {
+    font-size: 14px;
+  }
+}
+.home-content{
+  h1.title,h2.title {font-size: 24px;text-transform: uppercase; margin:20px 0 30px;text-align: center; 
+     @media (max-width: $mobile) {
+      font-size: 15px; margin:10px 0 15px;
+    }
+  }
+  p {font-size: 16px; line-height: 22px;
+    @media (max-width: $mobile) {
+      font-size: 14px; line-height: 18px;
+    }
+  }
+}
+.inner {width:$inner; margin:auto; @include clearfix;
+  @media (max-width: $inner) {
+    width: 100%; padding:0 20px; @include box-sizing;
+  }
+  @media (max-width: $mobile) {
+    padding:0 10px; min-width: $mobile-min-width;
+  }
+}
+.hide-mobile {
+  @media (max-width: $mobile) {
+    display: none !important;
+  }
+}
+.hide-desktop {
+   @media (min-width: $mobile+1) {
+     display: none !important;
   }
 }
 .button {display: inline-block;white-space: nowrap;padding:0 20px;line-height: 35px;
  height: 35px;color:#fff;border:none; font-size: 18px;
   text-align: center;
+  @media (max-width: $mobile) {
+    height: 25px; line-height: 25px; font-size: 14px; padding:0 13px;
+  }
 }
 .reg-yellow-button{background: url(../images/button1.png) no-repeat 0 0 $yellow; 
-  font-size: 18px; color: $black;  padding-left: 15px;
+  font-size: 16px; color: $black;  padding-left: 15px;
   span {display: inline-block; background:url(../images/arr-b.png) no-repeat 0 center; 
     padding-left: 26px;
   }
 }
-.reg-blue-button {background: url(../images/button2.png) no-repeat 0 0 $blue; font-size: 18px; 
+.reg-blue-button {background: url(../images/button2.png) no-repeat 0 0 $blue; font-size: 16px; 
   padding-left: 15px;
   span {display: inline-block; background:url(../images/arr-w.png) no-repeat 0 center; 
     padding-left: 26px;
@@ -62,39 +98,21 @@ h2,h4 {font-size: 18px;}
 .orange1-line:after {background-color: $orange1;}
 .orange-line:after {background-color: $orange;}
 
-#main {padding-top: 30px; background: #fff; min-height:600px;}
+#main {padding-top: 30px; background: #fff; }
 #main.tv1-page,#main.news-page { background: $grey;}
 .top-banner {text-align: center; overflow: hidden; width: 100%;height: 225px;
   background-size: cover !important;background-position: center center !important;
-  position: relative;
+  position: relative;background: url(../images/faq-banner.jpg) no-repeat center 0;
   img {width: 100%;}
   .inner {height: 100%;text-align: left; 
-    h1 { color: #fff; display: inline-block; line-height: 40px;
-      vertical-align: middle; padding-left: 14px;
+    h1 { color: #fff; display: inline-block; width: 350px;
+      vertical-align: middle; padding-left: 14px; margin-top: 20px;
+      br {display: none;}
     }
   }
 }
 .helper { display: inline-block;height: 100%;vertical-align: middle;}
-.arrow-left {background: url(../images/arrow-l.png) no-repeat 0 0; width:19px; height: 38px; position: absolute; top:50%; left: -19px; margin-top: -19px;}
-.arrow-right {background: url(../images/arrow-r.png) no-repeat 0 0; width:19px; height: 38px; position: absolute; top:50%; right: -19px; margin-top: -19px;}
-.box {background: #fff;@include clearfix; margin-bottom: 37px;
-  .text{background: #fff;float: left; position: relative;padding-bottom: 100px;
-    @include box-sizing; width: 50%;
-    h1 {font-size: 22px; color:#fff; height: 43px; line-height: 43px; padding-left: 30px;} 
-    .box-wrapper {font:bold 18px/24px $Arial;padding:30px;}
-    .other {position:absolute;bottom:27px; left:38px; white-space: nowrap;width: 100%;
-      @include box-sizing;padding-right: 63px;
-      .button { 
-        span {background: url(../images/arr-w.png) no-repeat right center; padding-right: 26px;
-        display: inline-block;font-weight: normal;}
-      }
-      .product-logo {float: right;}
-    }
-  }
-  .image { float: left;width: 50%;
-    img {min-height: 318px; width: 100%;}
-  }
-}
+
 /* Form */
 .form-list {
   li { margin-bottom: 10px;
@@ -112,6 +130,14 @@ h2,h4 {font-size: 18px;}
 .tab-content {display: none;
   &.active {display: block;}
 }
-.shadown {
+.shadown {cursor: pointer;
   &:hover {@include box-shadow(5px, 6px, 19px, 0px, #888);}
+}
+.zopim{
+  bottom: 10px !important;
+  right: 4px !important;
+
+}
+.zopim:first-child{
+  opacity: 0 !important;
 }

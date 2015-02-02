@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -7,24 +8,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="stylesheet" href="css/style.css"/>
 	<script type="text/javascript" src="http://austcare.vn/global/default/js/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="http://austcare.vn/global/default/js/austcare.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="js/austcare.js"></script>
 	<link rel="stylesheet" href="http://austcare.vn/global/default/css/colorbox.css" />
+	<link rel="stylesheet" href="css/flexslider.css" />
 	<script src="http://austcare.vn/global/default/js/jquery.colorbox.js"></script>
 	<title>Bệnh viện cửa cuốn Austcare.vn</title>
-	<meta content="Austcare.vn" name="description"/>
+	<meta content="AustCare cung cấp dịch vụ sửa chữa cửa cuốn hàng đầu Việt Nam. Với đội ngũ nhân viên nhiệt tình, tư vấn sửa chữa 24h/24h. Liên hệ tổng đài 1900.6828" name="description"/>
 	<meta name="keywords" content="">
 	<meta content="Bệnh viện cửa cuốn Austcare.vn" property="og:title"/>
-	<meta content="Austcare.vn" property="og:description"/>
+	<meta content="AustCare cung cấp dịch vụ sửa chữa cửa cuốn hàng đầu Việt Nam. Với đội ngũ nhân viên nhiệt tình, tư vấn sửa chữa 24h/24h. Liên hệ tổng đài 1900.6828" property="og:description"/>
 	<link rel="shortcut icon" href="http://austcare.vn/global/default/images/favicon.ico" />
-	<style>
-	.home-banner{
-		background: url(http://austcare.vn/global/default/images/home-banner.jpg) no-repeat center 0 #AF0002;
-	}
-	.home-banner .text{
-		display: none;
-	}
 
-	</style>
 	</head>
 
 <body>
@@ -61,10 +56,15 @@
 </div>
 
 <div class="home-banner">
-	<div class="hide-desktop">
-		<img src="http://austcare.vn/global/default/images/home-banner.jpg" alt="">
-	</div>
-	<div class="inner">
+		<div class="flexslider">
+		  <ul class="slides">
+		    <li><div class="img-wrapper">
+		    	<img src="http://austcare.vn/global/default/images/home-banner.jpg" alt=""></div></li>
+		    <li><div class="img-wrapper">
+		    	<img src="http://austcare.vn/global/default/images/home-banner.jpg" alt=""></div></li>
+			</ul>
+		</div>	
+
 		<div class="register" id="register">
 			<form action="#" id="regFrm" method="post" accept-charset="utf-8">
 				<h4>Đăng ký miễn phí</h4>
@@ -97,8 +97,10 @@
 				<h2>1900.6828</h2>
 			</div>
 		</div>
-	</div>
 </div>	
+<div class="reg hide-desktop">
+	<a href="#register" class="button reg-yellow-button inline" title=""><span>Đăng kí sửa cửa cuốn miễn phí</span></a>
+</div>
 <div id="main" class="home-content">
 	<div class="service">
 		<div class="inner">
@@ -292,7 +294,7 @@ Hãy đăng ký ngay với Austcare để được kiểm tra của cuốn hoàn
 	</div>
 	<div class="reg-now yellow">
 		<div class="inner">
-		<img src="http://austcare.vn/global/media/setting/Banner-ARC-png.png" alt="">
+		<img src="http://austcare.vn/global/media/setting/3001-Bottom-Banner-png-1-png.png" alt="">
 			<div class="reg">
 				<a href="#register" class="button reg-blue-button inline" title=""><span>Đăng ký ngay</span></a>
 			</div>
@@ -356,7 +358,7 @@ Hãy đăng ký ngay với Austcare để được kiểm tra của cuốn hoàn
     </div>
   </div>
   </div>
-  <a href="#easy-contact" class="popup-contact inline" style="display:none">&nbsp;</a>
+    <a href="#easy-contact" class="popup-contact inline" style="display:none">&nbsp;</a>
     
   <div id="chat-me">
     <div class="bubble" style="cursor:pointer">
@@ -395,7 +397,7 @@ Hãy đăng ký ngay với Austcare để được kiểm tra của cuốn hoàn
       <div class="call-me">
         <div style="text-align:center"><span style="font-size:24px">Hãy gọi cho chúng tôi qua tổng đài</span></div>
 
-<p style="text-align: center;"><img alt="" src="/global/media/upload/images/benh-vien-cua-cuon%20(1).png" style="height:143px; width:243px" /></p>
+<p style="text-align:center"><img alt="" src="/global/media/upload/images/benh-vien-cua-cuon%20(1).png" style="height:143px; width:243px" /></p>
 
 <div style="text-align:center"><span style="font-size:24px">Phục vụ trong giờ hành chính<br />
 từ Thứ 2 – Thứ 6 và sáng thứ 7<br />
@@ -429,7 +431,7 @@ phục vụ 24/7</span></div>
         </form>
     </div>
   </div>
-  <!--Start of Zopim Live Chat Script-->
+    <!--Start of Zopim Live Chat Script-->
 <script type="text/javascript">
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
 d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
@@ -437,7 +439,6 @@ _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
 $.src='//v2.zopim.com/?2N95o2PrUEkNWu3gXR4lpRsPGEUAWYib';z.t=+new Date;$.
 type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 </script>
-
 <!--End of Zopim Live Chat Script-->
 </body>
 <script>

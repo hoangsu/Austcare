@@ -1,4 +1,7 @@
 $(document).ready(function() {
+	$(".home-banner .flexslider").flexslider({
+    	controlNav:false
+    });
 	$("#chat-me a.close").click(function(event) {
 		$(this).parents("#chat-me").hide('slow');
 	});

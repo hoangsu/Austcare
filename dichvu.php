@@ -8,25 +8,28 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<link rel="stylesheet" href="css/style.css"/>
 	<script type="text/javascript" src="http://austcare.vn/global/default/js/jquery-1.11.1.min.js"></script>
+	<script src="http://austcare.vn/global/default/js/jquery.flexslider-min.js"></script>
+	<script src="http://austcare.vn/global/default/js/jquery.colorbox.js"></script>
 	<script type="text/javascript" src="http://austcare.vn/global/default/js/austcare.js"></script>
 	<link rel="stylesheet" href="http://austcare.vn/global/default/css/colorbox.css" />
-	<script src="http://austcare.vn/global/default/js/jquery.colorbox.js"></script>
-	<title>Dịch vụ</title>
-	<meta content="" name="description"/>
+	<link rel="stylesheet" href="http://austcare.vn/global/default/css/flexslider.css" />
+	<title>Dịch vụ sửa chữa cửa cuốn uy tín giá rẻ tại Hà Nội</title>
+	<meta content="Dịch vụ sửa chữa cửa cuốn uy tín giá rẻ tại Hà Nội. AustCare cung cấp giải pháp sửa chữa cửa cuốn hàng đầu Viêt Nam. Tư vấn miễn phí 1900.6828" name="description"/>
 	<meta name="keywords" content="">
-	<meta content="Dịch vụ" property="og:title"/>
-	<meta content="" property="og:description"/>
+	<meta content="Dịch vụ sửa chữa cửa cuốn uy tín giá rẻ tại Hà Nội" property="og:title"/>
+	<meta content="Dịch vụ sửa chữa cửa cuốn uy tín giá rẻ tại Hà Nội. AustCare cung cấp giải pháp sửa chữa cửa cuốn hàng đầu Viêt Nam. Tư vấn miễn phí 1900.6828" property="og:description"/>
 	<link rel="shortcut icon" href="http://austcare.vn/global/default/images/favicon.ico" />
-	<style>
-	.home-banner{
-		background: url(http://austcare.vn/global/default/images/home-banner.jpg) no-repeat center 0 #AF0002;
-	}
-	.home-banner .text{
-		display: none;
-	}
 
-	</style>
-	</head>
+	<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-59281821-1', 'auto');
+  ga('send', 'pageview');
+
+</script></head>
 
 <body>
 	<div id="fb-root"></div>
@@ -98,7 +101,7 @@
 		<div class="inner">
 			<div class="wrapper-img"><img src="http://austcare.vn/global/media/post/th-jpg.jpeg" alt=""></div>
 			<div class="text">
-				<h1>THẢNH THƠI TẬN HƯỞNG CUỘC SỐNG</h1>
+				<h2>THẢNH THƠI TẬN HƯỞNG CUỘC SỐNG</h2>
 				<p><p><strong>Hãy gạt bỏ hoàn toàn những khó chịu khi sử dụng một bộ cửa cuốn không như ý để thảnh thơi tận hưởng cuộc sống.</strong></p>
 </p>
 				<a class="button reg-blue-button" href="bang-gia-dich-vu-87.html"><span>Click để xem bảng giá dịch vụ</span></a>
@@ -108,28 +111,28 @@
 	<div class="easy-contact" id="easy-contact">
 		<div class="inner">
 			<div class="top">
-				<h1>Liên hệ dễ dàng</h1>
+				<h2>Liên hệ dễ dàng</h2>
 				<p>Cửa cuốn nhà bạn đang gặp sự cố? Hãy liên hệ với chúng tôi bằng 1 trong 3 cách sau để được tư vấn, sửa chữa cực kỳ dễ dàng và nhanh chóng:</p>
 			</div>
 			<div class="col-group">
 				<div class="col">
 					<img src="http://austcare.vn/global/default/images/chat.png" alt="" class="shadown">
 					<div class="caption">
-						<h1>Live Chat</h1>
+						<h3>Live Chat</h3>
 						<p>“Dịch vụ tư vấn trực tuyến” <br>Phục vụ từ 08h00 - 17h 00<br>Từ thứ 2 đến thứ 7</p>
 					</div>
 				</div>
 				<div class="col">
 					<a href="#call-form" class="inline"><img src="http://austcare.vn/global/default/images/call.png" alt="" class="shadown"></a>
 					<div class="caption">
-						<h1>Điện thoại</h1>
+						<h3>Điện thoại</h3>
 						<p>Gọi số hỗ trợ khách hàng <br>Phục vụ 24h trong ngày <br>và 7 ngày trong tuần.</p>
 					</div>
 				</div>
 				<div class="col">
 					<a href="#email-form" class="inline"><img src="http://austcare.vn/global/default/images/email.png"  class="shadown" alt=""></a>
 					<div class="caption">
-						<h1>Email</h1>
+						<h3>Email</h3>
 						<p>Hãy gửi email cho <br>chúng tôi và nhận phản hồi <br>nhanh nhất.</p>
 					</div>
 				</div>
@@ -202,7 +205,7 @@
     </div>
   </div>
   </div>
-  <a href="#easy-contact" class="popup-contact inline" style="display:none">&nbsp;</a>
+    <a href="#easy-contact" class="popup-contact inline" style="display:none">&nbsp;</a>
     
   <div id="chat-me">
     <div class="bubble" style="cursor:pointer">
@@ -233,6 +236,28 @@
             <label for="">Điện thoại :</label>
             <input class="input-text" type="text" name="phone" pattern="\d*" value="" placeholder="">
           </li>
+          <input type="hidden" name="regType" value="1"/>
+          <li class="control"><button type="submit" class="button blue-bg"><span>Gửi</span></button></li>
+        </ul>
+      </form>
+    </div>
+    <div class="register" id="register_copy">
+      <form action="#" id="regFrm" method="post" accept-charset="utf-8">
+        <h4>Đăng ký miễn phí</h4>
+        <ul class="form-list">
+          <li>
+            <label for="">Họ tên:</label>
+            <input class="input-text" type="text" name="name" value="" placeholder="">
+          </li>
+          <li>
+            <label for="">Email:</label>
+            <input class="input-text" type="email" name="email" value="" placeholder="">
+          </li>
+          <li>
+            <label for="">Điện thoại :</label>
+            <input class="input-text" type="text" name="phone" pattern="\d*" value="" placeholder="">
+          </li>
+          <input type="hidden" name="regType" value="2"/>
           <li class="control"><button type="submit" class="button blue-bg"><span>Gửi</span></button></li>
         </ul>
       </form>
@@ -241,7 +266,7 @@
       <div class="call-me">
         <div style="text-align:center"><span style="font-size:24px">Hãy gọi cho chúng tôi qua tổng đài</span></div>
 
-<p style="text-align: center;"><img alt="" src="/global/media/upload/images/benh-vien-cua-cuon%20(1).png" style="height:143px; width:243px" /></p>
+<p style="text-align:center"><img alt="" src="/global/media/upload/images/benh-vien-cua-cuon%20(1).png" style="height:143px; width:243px" /></p>
 
 <div style="text-align:center"><span style="font-size:24px">Phục vụ trong giờ hành chính<br />
 từ Thứ 2 – Thứ 6 và sáng thứ 7<br />
@@ -251,41 +276,41 @@ phục vụ 24/7</span></div>
       </div>
     </div>
 	  <div id="email-form">
-      <form action="#" method="post" accept-charset="utf-8">
+      <form action="http://austcare.vn/register/contact" id="mailFrm" method="post" accept-charset="utf-8">
           <h3>Liên hệ</h3>
           <ul class="form-list">
             <li>
               <label for="">Họ tên:</label>
-              <input class="input-text" type="text" name="" value="" placeholder="">
+              <input class="input-text" type="text" name="name" value="" placeholder="">
             </li>
             <li>
               <label for="">Email:</label>
-              <input class="input-text" type="email" name="" value="" placeholder="">
+              <input class="input-text" type="email" name="email" value="" placeholder="">
             </li>
             <li>
               <label for="">Điện thoại :</label>
-              <input class="input-text" type="text" name="" pattern="\d*" value="" placeholder="">
+              <input class="input-text" type="text" name="phone" pattern="\d*" value="" placeholder="">
             </li>
             <li>
               <label for="">Message :</label>
-              <textarea class="input-text" name="" style="height:100px"></textarea>
+              <textarea class="input-text" name="message" style="height:100px"></textarea>
             </li>
             <li class="control"><button type="submit" class="button blue-bg"><span>Gửi</span></button></li>
           </ul>
         </form>
     </div>
   </div>
-  <!--Start of Zopim Live Chat Script-->
+    <!--Start of Zopim Live Chat Script-->
 <script type="text/javascript">
 window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
 d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
 _.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
-$.src='//v2.zopim.com/?2N95o2PrUEkNWu3gXR4lpRsPGEUAWYib';z.t=+new Date;$.
+$.src='//v2.zopim.com/?2ldSwOxR4ExCWV14DfkiGu2BQKOI3dIC';z.t=+new Date;$.
 type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
 </script>
-
 <!--End of Zopim Live Chat Script-->
-</body>
+
+  </body>
 <script>
 $(window).scroll(function(){
 	if($(window).scrollTop() > 500){
@@ -304,7 +329,7 @@ $('.col-group .col:eq(0) img').click(function(e){
 	});
 });
 $('div[style*=transparent]').css('opacity','0');
-$('#regFrm').submit(function(e){
+$('[id=regFrm]').submit(function(e){
 	var form = $(this);
 	var name = $(this).find('input[name=name]');
 	var email = $(this).find('input[name=email]');
@@ -331,6 +356,9 @@ $('#regFrm').submit(function(e){
 		url: 'http://austcare.vn/register/add',
 		type: 'POST',
 		data: form.serialize(),
+		beforeSend: function(){
+			form.find('.blue-bg').text('Đang xử lý');
+		},
 		success: function(data){
 			try{
 				var obj = $.parseJSON(data);
@@ -342,9 +370,62 @@ $('#regFrm').submit(function(e){
 			}catch(err){
 				alert('Quá trình đăng kí bị lỗi vui lòng liên hệ Hot Line: 1900 6828. Cảm ơn quý khách');
 			}
+			$('#regFrm .blue-bg').text('Gửi');
 		},
 		error: function(msg){
 			alert('Quá trình đăng kí bị lỗi vui lòng liên hệ Hot Line: 1900 6828. Cảm ơn quý khách');
+		}
+	})
+	e.preventDefault();
+})
+$('[id=mailFrm]').submit(function(e){
+	var form = $(this);
+	var name = $(this).find('input[name=name]');
+	var email = $(this).find('input[name=email]');
+	var phone = $(this).find('input[name=phone]');
+	var phone = $(this).find('textarea[name=message]');
+	if(name.val() == ''){
+		name.attr('value','Vui lòng nhập họ tên').css('color','red');
+		return false;
+	}else{
+		name.attr('style','');
+	}
+	if(email.val() == ''){
+		email.attr('value','Vui lòng nhập email').css('color','red');
+		return false;
+	}else{
+		email.attr('style','');
+	}
+	if(phone.val() == ''){
+		phone.attr('value','Vui lòng nhập điện thoại').css('color','red');
+		return false;
+	}else{
+		phone.attr('style','');
+	}
+	$.ajax({
+		url: form.attr('action'),
+		type: 'POST',
+		data: form.serialize(),
+		beforeSend: function(){
+			form.find('.blue-bg').text('Đang xử lý');
+		},
+		success: function(data){
+			try{
+				var obj = $.parseJSON(data);
+				if(obj.message == 'success') {
+					alert('Cảm ơn quý khách đã liên hệ. Chúng tôi sẽ liên hệ ngay sau khi nhận được thông tin của quý khách.');
+					form.find('input').val('');
+					form.find('textarea').val('');
+					$('[id=cboxClose]').trigger('click');
+				}else 
+					alert('Quá trình gửi liên hệ bị lỗi vui lòng liên hệ Hot Line: 1900 6828. Cảm ơn quý khách');
+			}catch(err){
+				alert('Quá trình gửi liên hệ bị lỗi vui lòng liên hệ Hot Line: 1900 6828. Cảm ơn quý khách');
+			}
+			form.find('.blue-bg').text('Gửi');
+		},
+		error: function(msg){
+			alert('Quá trình gửi liên hệ bị lỗi vui lòng liên hệ Hot Line: 1900 6828. Cảm ơn quý khách');
 		}
 	})
 	e.preventDefault();
